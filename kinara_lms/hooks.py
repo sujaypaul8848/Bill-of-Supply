@@ -63,7 +63,7 @@ app_license = "MIT"
 # ------------
 
 # before_install = "kinara_lms.install.before_install"
-# after_install = "kinara_lms.install.after_install"
+after_install = "kinara_lms.install.after_install"
 
 # Uninstallation
 # ------------
@@ -109,9 +109,9 @@ app_license = "MIT"
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
-#	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+override_doctype_class = {
+	"Customer": "kinara_lms.overrides.customer_master.CustomerMaster",
+}
 
 # Document Events
 # ---------------
