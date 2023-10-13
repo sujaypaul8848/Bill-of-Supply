@@ -2,6 +2,9 @@ from frappe.custom.doctype.custom_field.custom_field import create_custom_fields
 from frappe.desk.page.setup_wizard.setup_wizard import make_records
 from frappe.custom.doctype.property_setter.property_setter import make_property_setter
 
+from kinara_lms.constants.kinara_default_states import KINARA_DEFAULT_STATES
+
+
 KINARA_CUSTOM_FIELDS = {
 	"Customer": [
 		{
@@ -134,8 +137,8 @@ def make_fixtures():
 		# Bank Account Types
 		{"doctype": "Bank Account Type", "account_type": "Disbursement"},
 		{"doctype": "Bank Account Type", "account_type": "Collections"},
-		{"doctype": "Bank Account Type", "account_type": "Disbursement & Collections"},
-	]
+		{"doctype": "Bank Account Type", "account_type": "Disbursement & Collections"},\
+	] + KINARA_DEFAULT_STATES
 
 	make_records(records)
 
