@@ -42,6 +42,13 @@ KINARA_CUSTOM_FIELDS = {
 			"insert_after": "applicant"
 		},
 		{
+			"fieldname": "loan_application_id",
+			"label": "Loan Application ID",
+			"fieldtype": "Data",
+			"unique": 1,
+			"insert_after": "loan_id"
+		},
+		{
 			"fieldname": "loan_account_number",
 			"label": "Loan Account Number",
 			"fieldtype": "Data",
@@ -121,6 +128,12 @@ KINARA_CUSTOM_FIELDS = {
 			"label": "Loan Sub Purpose",
 			"fieldtype": "Data",
 			"insert_after": "loan_purpose"
+		},
+		{
+			"fieldname": "effective_interest_rate",
+			"label": "Annualized Percentage/Effective Interest Rate",
+			"fieldtype": "Float",
+			"insert_after": "green_finance_flag"
 		},
 	]
 }
