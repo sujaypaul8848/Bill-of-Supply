@@ -9,8 +9,8 @@
  "field_order": [
   "loan",
   "loan_account_number",
-  "entity_type",
   "entity",
+  "entity_relationship_type",
   "urn_no"
  ],
  "fields": [
@@ -27,11 +27,6 @@
    "label": "Loan Account Number"
   },
   {
-   "fieldname": "entity_type",
-   "fieldtype": "Data",
-   "label": "Entity Type"
-  },
-  {
    "fieldname": "entity",
    "fieldtype": "Link",
    "label": "Entity",
@@ -42,11 +37,17 @@
    "fieldname": "urn_no",
    "fieldtype": "Data",
    "label": "URN No"
+  },
+  {
+   "fieldname": "entity_relationship_type",
+   "fieldtype": "Select",
+   "label": "Entity Relationship Type",
+   "options": "applicant\ncoapplicant\nguarantor\nbuyer\nseller\nbusiness"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-16 14:43:56.773448",
+ "modified": "2023-10-18 09:38:55.514998",
  "modified_by": "Administrator",
  "module": "Kinara LMS",
  "name": "Loan Entity Mapping",

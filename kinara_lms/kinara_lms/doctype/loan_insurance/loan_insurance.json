@@ -1,0 +1,98 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-10-18 09:13:02.881570",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "loan",
+  "insurer_entity_id",
+  "insurer_entity_type",
+  "insurer_urn",
+  "insurance_id",
+  "insurance_premium",
+  "insured_amount",
+  "nominee_urn",
+  "start_date",
+  "end_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "loan",
+   "fieldtype": "Link",
+   "label": "Loan",
+   "options": "Loan"
+  },
+  {
+   "fieldname": "insurer_entity_id",
+   "fieldtype": "Data",
+   "label": "Insurer Entity Id"
+  },
+  {
+   "fieldname": "insurer_entity_type",
+   "fieldtype": "Data",
+   "label": "Insurer Entity Type"
+  },
+  {
+   "fieldname": "insurer_urn",
+   "fieldtype": "Data",
+   "label": "Insurer URN"
+  },
+  {
+   "fieldname": "insurance_id",
+   "fieldtype": "Data",
+   "label": "Insurance Id"
+  },
+  {
+   "fieldname": "insurance_premium",
+   "fieldtype": "Currency",
+   "label": "Insurance Premium"
+  },
+  {
+   "fieldname": "insured_amount",
+   "fieldtype": "Currency",
+   "label": "Insured Amount"
+  },
+  {
+   "fieldname": "nominee_urn",
+   "fieldtype": "Data",
+   "label": "Nominee URN"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-18 09:17:17.628581",
+ "modified_by": "Administrator",
+ "module": "Kinara LMS",
+ "name": "Loan Insurance",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -15,6 +15,14 @@ KINARA_CUSTOM_FIELDS = {
 			"unique": 1,
 			"reqd": 1,
 		},
+		{
+			"fieldname": "entity_type",
+			"label": "Entity Type",
+			"fieldtype": "Select",
+			"insert_after": "customer_urn",
+			"options": "Applicant\nCo-Applicant",
+			"reqd": 1,
+		},
 	],
 	"Loan Partner": [
 		{

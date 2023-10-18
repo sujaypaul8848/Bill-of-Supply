@@ -1,0 +1,47 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-10-18 11:57:06.442909",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "disbursement_date",
+  "disbursement_amount",
+  "bank_account"
+ ],
+ "fields": [
+  {
+   "fieldname": "disbursement_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Disbursement Date"
+  },
+  {
+   "fieldname": "disbursement_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Disbursement Amount"
+  },
+  {
+   "fieldname": "bank_account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Bank Account",
+   "options": "Bank Account"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-10-18 16:55:50.538725",
+ "modified_by": "Administrator",
+ "module": "Kinara LMS",
+ "name": "Loan Disbursement Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
