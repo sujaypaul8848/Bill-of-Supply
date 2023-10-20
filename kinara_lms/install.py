@@ -41,6 +41,50 @@ KINARA_CUSTOM_FIELDS = {
 			"insert_after": "stock_uom",
 		},
 	],
+	"Loan Disbursement": [
+		{
+			"fieldname": "kc_disbursement_section",
+			"label": "Kinara Disbursement Details",
+			"fieldtype": "Section Break",
+			"insert_after": "reference_number"
+		},
+		{
+			"fieldname": "disbursement_mode",
+			"label": "Disbursement Mode",
+			"fieldtype": "Data",
+			"insert_after": "kc_disbursement_section"
+		},
+		{
+			"fieldname": "customer_bank_account_number",
+			"label": "Customer Bank Account Number",
+			"fieldtype": "Data",
+			"insert_after": "disbursement_mode"
+		},
+		{
+			"fieldname": "customer_bank_ifsc_code",
+			"label": "Customer Bank IFSC Code",
+			"fieldtype": "Data",
+			"insert_after": "customer_bank_account_number"
+		},
+		{
+			"fieldname": "customer_bank_name",
+			"label": "Customer Bank Name",
+			"fieldtype": "Data",
+			"insert_after": "customer_bank_ifsc_code"
+		},
+		{
+			"fieldname": "customer_bank_branch_name",
+			"label": "Customer Bank Branch Name",
+			"fieldtype": "Data",
+			"insert_after": "customer_bank_name"
+		},
+		{
+			"fieldname": "customer_bank_account_holder_name",
+			"label": "Customer Bank Account Holder Name",
+			"fieldtype": "Data",
+			"insert_after": "customer_bank_branch_name"
+		},
+	],
 	"Loan": [
 		{
 			"fieldname": "loan_id",
