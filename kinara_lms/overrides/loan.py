@@ -17,7 +17,7 @@ def created_loan_related_docs(doc, method=None):
 			"document_details": d.get("document_details")
 		}).insert()
 
-	for d in doc.get("insurance_details"):
+	for d in doc.get("insurance_details") or []:
 		insurance_doc = frappe.new_doc("Loan Insurance")
 		insurance_doc.loan = doc.name
 		insurance_doc.insurer_entity_id = d.get("insurer_entity_id")
@@ -31,7 +31,7 @@ def created_loan_related_docs(doc, method=None):
 		insurance_doc.end_date = d.get("end_date")
 		insurance_doc.save()
 
-	for d in doc.get("disbursement_details"):
+	for d in doc.get("disbursement_details") or []:
 		disbursement_doc = frappe.new_doc("Loan Disbursement")
 		disbursement_doc.against_loan = doc.name
 		disbursement_doc.disbursement_date= d.get("actual_disbursement_date")
@@ -46,28 +46,29 @@ def created_loan_related_docs(doc, method=None):
 		disbursement_doc.disbursement_mode = d.get("disbursement_mode")
 		disbursement_doc.save()
 
-	loan_security_assignment = frappe.new_doc("Loan Security Assignment")
-	loan_security_assignment.applicant_type = doc.get("applicant_type")
-	loan_security_assignment.applicant = doc.get("applicant")
+	if doc.get("collateral_details"):
+		loan_security_assignment = frappe.new_doc("Loan Security Assignment")
+		loan_security_assignment.applicant_type = doc.get("applicant_type")
+		loan_security_assignment.applicant = doc.get("applicant")
 
-	for d in doc.get("collateral_details"):
-		security = frappe.new_doc("Loan Security")
-		security.loan_security_code = d.get("collateral_id")
-		security.loan_security_name = d.get("collateral_id")
-		security.unit_of_measure = "Nos",
-		security.loan_security_type = "Property"
-		security.save()
+		for d in doc.get("collateral_details") or []:
+			security = frappe.new_doc("Loan Security")
+			security.loan_security_code = d.get("collateral_id")
+			security.loan_security_name = d.get("collateral_id")
+			security.unit_of_measure = "Nos",
+			security.loan_security_type = "Property"
+			security.save()
 
-		loan_security_assignment.append("securities", {
-			"loan_security": security.name,
-			"amount": d.get("collateral_value")
+			loan_security_assignment.append("securities", {
+				"loan_security": security.name,
+				"amount": d.get("collateral_value")
+			})
+
+		loan_security_assignment.append("allocated_loans", {
+			"loan": doc.name
 		})
 
-	loan_security_assignment.append("allocated_loans", {
-		"loan": doc.name
-	})
-
-	loan_security_assignment.save()
+		loan_security_assignment.save()
 
 def override_name(doc, method=None):
 	doc.name = doc.get("loan_account_number")
