@@ -54,14 +54,17 @@ def created_loan_related_docs(doc, method=None):
 		for d in doc.get("collateral_details") or []:
 			security = frappe.new_doc("Loan Security")
 			security.loan_security_code = d.get("collateral_id")
-			security.loan_security_name = d.get("collateral_id")
+			security.loan_security_name = d.get("collateral_name")
 			security.unit_of_measure = "Nos",
 			security.loan_security_type = "Property"
+			security.security_owner_type = doc.get("collateral_owner_type")
+			security.security_owner = doc.get("collateral_owner")
 			security.save()
 
 			loan_security_assignment.append("securities", {
 				"loan_security": security.name,
-				"amount": d.get("collateral_value")
+				"qty": 1,
+				"loan_security_price": d.get("collateral_value"),
 			})
 
 		loan_security_assignment.append("allocated_loans", {

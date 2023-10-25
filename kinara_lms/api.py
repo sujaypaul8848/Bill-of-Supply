@@ -32,6 +32,60 @@ def create_charge(args):
 	else:
 		charge.is_nil_exempt = 1
 	
-	charge.insert(ignore_permissions=True)
+	charge.insert()
 
 	return charge
+
+
+@frappe.whitelist()
+def create_collateral(args):
+	if isinstance(args, str):
+		args = json.loads(args)
+
+	args = frappe._dict(args)
+	
+	loan_security = frappe.get_doc({
+		"doctype": "Loan Security",
+		"loan_security_code": args.collateral_id,
+		"loan_security_name": args.collateral_name,
+		"unit_of_measure": "Nos",
+		"loan_security_type": "Property",
+		"security_owner_type": args.collateral_owner_type,
+		"security_owner": args.collateral_owner,
+	}).insert()
+
+	loan_security_assignment = frappe.new_doc("Loan Security Assignment")
+	loan_security_assignment.applicant_type = args.applicant_type
+	loan_security_assignment.applicant = args.applicant
+
+	loan_security_assignment.append("securities", {
+		"loan_security": loan_security.name,
+		"qty": 1,
+		"loan_security_price": args.collateral_value,
+	})
+
+	loan_security_assignment.insert()
+
+	return loan_security_assignment
+
+
+@frappe.whitelist()
+def release_collateral_against_loan(args):
+	if isinstance(args, str):
+		args = json.loads(args)
+
+	args = frappe._dict(args)
+
+	loan_security_release = frappe.new_doc("Loan Security Release")
+	loan_security_release.loan = args.loan
+
+	loan_security_release.append("securities", {
+		"loan_security": args.collateral_id,
+		"qty": 1,
+	})
+
+	loan_security_release.insert()
+	loan_security_release.submit()
+
+	return loan_security_release
+
