@@ -52,6 +52,16 @@ def create_collateral(args):
 		"loan_security_type": "Property",
 		"security_owner_type": args.collateral_owner_type,
 		"security_owner": args.collateral_owner,
+		"kinara_collateral_type": args.kinara_collateral_type,
+		"kinara_collateral_subtype": args.kinara_collateral_subtype,
+		"kinara_collateral_ltv_amount": args.kinara_collateral_ltv_amount,
+		"kinara_collateral_condition": args.kinara_collateral_condition,
+		"kinara_description": args.kinara_description,
+		"kinara_manufacturer_name": args.kinara_manufacturer_name,
+		"kinara_model_number": args.kinara_model_number,
+		"kinara_serial_number": args.kinara_serial_number,
+		"kinara_entity_urn": args.kinara_entity_urn,
+		"kinara_cersai_charge_required": args.kinara_cersai_charge_required
 	}).insert()
 
 	loan_security_assignment = frappe.new_doc("Loan Security Assignment")

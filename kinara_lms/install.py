@@ -196,6 +196,80 @@ KINARA_CUSTOM_FIELDS = {
 			"insert_after": "default_holiday_list",
 		},
 	],
+	"Loan Security": [
+		{
+			"fieldname": "section_break_kinara_details",
+			"label": "Kinara Details",
+   			"fieldtype": "Section Break",
+			"insert_after": "security_owner",
+		},
+		{
+			"fieldname": "kinara_collateral_type",
+			"label": "Kinara Collateral Type",
+			"fieldtype": "Data",
+			"insert_after": "section_break_kinara_details"
+		},
+		{
+			"fieldname": "kinara_collateral_subtype",
+			"label": "Kinara Collateral Subtype",
+			"fieldtype": "Data",
+			"insert_after": "kinara_collateral_type"
+		},
+		{
+			"fieldname": "kinara_collateral_ltv_amount",
+			"label": "Kinara LTV Amount",
+			"fieldtype": "Currency",
+			"options": "Company:company:default_currency",
+			"insert_after": "kinara_collateral_subtype"
+		},
+		{
+			"fieldname": "kinara_collateral_condition",
+			"label": "Kinara Collateral Condition",
+			"fieldtype": "Data",
+			"insert_after": "kinara_collateral_ltv_amount"
+		},
+		{
+			"fieldname": "column_break_dsfe",
+			"fieldtype": "Column Break",
+			"insert_after": "kinara_collateral_condition"
+		},
+		{
+			"fieldname": "kinara_description",
+			"label": "Kinara Description",
+			"fieldtype": "Data",
+			"insert_after": "column_break_dsfe"
+		},
+		{
+			"fieldname": "kinara_manufacturer_name",
+			"label": "Kinara Manufacturer Name",
+			"fieldtype": "Data",
+			"insert_after": "kinara_description"
+		},
+		{
+			"fieldname": "kinara_model_number",
+			"label": "Kinara Model Number",
+			"fieldtype": "Data",
+			"insert_after": "kinara_manufacturer_name"
+		},
+		{
+			"fieldname": "kinara_serial_number",
+			"label": "Kinara Serial Number",
+			"fieldtype": "Data",
+			"insert_after": "kinara_model_number"
+		},
+		{
+			"fieldname": "kinara_entity_urn",
+			"label": "Kinara Entity URN",
+			"fieldtype": "Data",
+			"insert_after": "kinara_serial_number"
+		},
+		{
+			"fieldname": "kinara_cersai_charge_required",
+			"label": "Kinara CERSAI Charge Required",
+			"fieldtype": "Check",
+			"insert_after": "kinara_entity_urn"
+		},
+	],
 }
 
 
