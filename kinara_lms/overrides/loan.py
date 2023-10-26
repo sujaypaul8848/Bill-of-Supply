@@ -57,19 +57,19 @@ def created_loan_related_docs(doc, method=None):
 			security.loan_security_name = d.get("collateral_name")
 			security.unit_of_measure = "Nos",
 			security.loan_security_type = "Property"
-			security.security_owner_type = doc.get("collateral_owner_type")
-			security.security_owner = doc.get("collateral_owner")
+			security.security_owner_type = d.get("collateral_owner_type")
+			security.security_owner = d.get("collateral_owner")
 
-			security.kinara_collateral_type = doc.get("kinara_collateral_type")
-			security.kinara_collateral_subtype = doc.get("kinara_collateral_subtype")
-			security.kinara_collateral_ltv_amount = doc.get("kinara_collateral_ltv_amount")
-			security.kinara_collateral_condition = doc.get("kinara_collateral_condition")
-			security.kinara_description = doc.get("kinara_description")
-			security.kinara_manufacturer_name = doc.get("kinara_manufacturer_name")
-			security.kinara_model_number = doc.get("kinara_model_number")
-			security.kinara_serial_number = doc.get("kinara_serial_number")
-			security.kinara_entity_urn = doc.get("kinara_entity_urn")
-			security.kinara_cersai_charge_required = doc.get("kinara_cersai_charge_required")
+			security.kinara_collateral_type = d.get("kinara_collateral_type")
+			security.kinara_collateral_subtype = d.get("kinara_collateral_subtype")
+			security.kinara_collateral_ltv_amount = d.get("kinara_collateral_ltv_amount")
+			security.kinara_collateral_condition = d.get("kinara_collateral_condition")
+			security.kinara_description = d.get("kinara_description")
+			security.kinara_manufacturer_name = d.get("kinara_manufacturer_name")
+			security.kinara_model_number = d.get("kinara_model_number")
+			security.kinara_serial_number = d.get("kinara_serial_number")
+			security.kinara_entity_urn = d.get("kinara_entity_urn")
+			security.kinara_cersai_charge_required = d.get("kinara_cersai_charge_required")
 
 			security.save()
 
