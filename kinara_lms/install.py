@@ -187,7 +187,15 @@ KINARA_CUSTOM_FIELDS = {
 			"fieldtype": "Float",
 			"insert_after": "green_finance_flag"
 		},
-	]
+	],
+	"Company": [
+		{
+			"fieldname": "cin_number",
+			"label": "CIN Number",
+			"fieldtype": "Data",
+			"insert_after": "default_holiday_list",
+		},
+	],
 }
 
 

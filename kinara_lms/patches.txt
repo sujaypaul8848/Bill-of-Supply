@@ -12,3 +12,4 @@ kinara_lms.patches.v15_0.make_property_setters #1
 kinara_lms.patches.v15_0.create_loan_custom_fields #rerun
 kinara_lms.patches.v15_0.create_kinara_default_states
 kinara_lms.patches.v15_0.create_loan_disbursement_custom_fields #1
+kinara_lms.patches.v15_0.create_cin_number_in_company
