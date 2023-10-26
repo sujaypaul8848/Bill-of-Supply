@@ -2,6 +2,10 @@ import json
 
 import frappe
 
+from lending.loan_management.doctype.loan_security_assignment.loan_security_assignment import (
+	release_loan_security_assignment,
+)
+
 
 @frappe.whitelist()
 def create_charge(args):
@@ -121,6 +125,22 @@ def release_collateral_against_customer(args):
 	)
 
 	for d in all_loans_and_lsa or []:
-		frappe.db.set_value(
-			"Loan Security Assignment", d.lsa, "status", "Released"
-		)
+		release_loan_security_assignment(d.lsa)
+
+
+@frappe.whitelist()
+def get_all_addresses_and_contacts_for_customer(args):
+	if isinstance(args, str):
+		args = json.loads(args)
+
+	args = frappe._dict(args)
+
+	addresses_and_contacts = {}
+
+	addresses = frappe.db.get_all("Dynamic Link", filters={"parenttype": "Address", "link_doctype": "Customer", "link_name": args.customer}, pluck="parent")
+	contacts = frappe.db.get_all("Dynamic Link", filters={"parenttype": "Contact", "link_doctype": "Customer", "link_name": args.customer}, pluck="parent")
+
+	addresses_and_contacts['addresses'] = addresses
+	addresses_and_contacts['contacts'] = contacts
+
+	return addresses_and_contacts
