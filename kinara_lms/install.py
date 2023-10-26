@@ -201,7 +201,7 @@ KINARA_CUSTOM_FIELDS = {
 			"fieldname": "section_break_kinara_details",
 			"label": "Kinara Details",
    			"fieldtype": "Section Break",
-			"insert_after": "security_owner",
+			"insert_after": "disabled",
 		},
 		{
 			"fieldname": "kinara_collateral_type",

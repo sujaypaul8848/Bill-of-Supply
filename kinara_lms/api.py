@@ -50,8 +50,6 @@ def create_collateral(args):
 		"loan_security_name": args.collateral_name,
 		"unit_of_measure": "Nos",
 		"loan_security_type": "Property",
-		"security_owner_type": args.collateral_owner_type,
-		"security_owner": args.collateral_owner,
 		"kinara_collateral_type": args.kinara_collateral_type,
 		"kinara_collateral_subtype": args.kinara_collateral_subtype,
 		"kinara_collateral_ltv_amount": args.kinara_collateral_ltv_amount,
@@ -67,6 +65,8 @@ def create_collateral(args):
 	loan_security_assignment = frappe.new_doc("Loan Security Assignment")
 	loan_security_assignment.applicant_type = args.applicant_type
 	loan_security_assignment.applicant = args.applicant
+	loan_security_assignment.applicant_type = args.collateral_owner_type
+	loan_security_assignment.applicant = args.collateral_owner
 
 	loan_security_assignment.append("securities", {
 		"loan_security": loan_security.name,
@@ -99,3 +99,28 @@ def release_collateral_against_loan(args):
 
 	return loan_security_release
 
+
+@frappe.whitelist()
+def release_collateral_against_customer(args):
+	if isinstance(args, str):
+		args = json.loads(args)
+
+	args = frappe._dict(args)
+
+	all_loans_and_lsa = frappe.db.sql(
+		"""
+		SELECT lsa.name as lsa
+		FROM `tabLoan Security Assignment` lsa, `tabPledge` p, `tabLoan Security Assignment Loan Detail` lsald
+		WHERE p.loan_security = %s
+		AND p.parent = lsa.name
+		AND lsald.parent = lsa.name
+		AND lsa.status = 'Release Requested'
+		""",
+		(args.collateral_id),
+		as_dict=True,
+	)
+
+	for d in all_loans_and_lsa or []:
+		frappe.db.set_value(
+			"Loan Security Assignment", d.lsa, "status", "Released"
+		)

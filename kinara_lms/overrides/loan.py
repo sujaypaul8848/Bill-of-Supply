@@ -50,6 +50,8 @@ def created_loan_related_docs(doc, method=None):
 		loan_security_assignment = frappe.new_doc("Loan Security Assignment")
 		loan_security_assignment.applicant_type = doc.get("applicant_type")
 		loan_security_assignment.applicant = doc.get("applicant")
+		loan_security_assignment.security_owner_type = doc.get("collateral_owner_type")
+		loan_security_assignment.security_owner = doc.get("collateral_owner")
 
 		for d in doc.get("collateral_details") or []:
 			security = frappe.new_doc("Loan Security")
@@ -57,8 +59,6 @@ def created_loan_related_docs(doc, method=None):
 			security.loan_security_name = d.get("collateral_name")
 			security.unit_of_measure = "Nos",
 			security.loan_security_type = "Property"
-			security.security_owner_type = d.get("collateral_owner_type")
-			security.security_owner = d.get("collateral_owner")
 
 			security.kinara_collateral_type = d.get("kinara_collateral_type")
 			security.kinara_collateral_subtype = d.get("kinara_collateral_subtype")
