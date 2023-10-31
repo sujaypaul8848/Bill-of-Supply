@@ -144,3 +144,28 @@ def get_all_addresses_and_contacts_for_customer(args):
 	addresses_and_contacts['contacts'] = contacts
 
 	return addresses_and_contacts
+
+
+@frappe.whitelist()
+def update_contact(args):
+	if isinstance(args, str):
+		args = json.loads(args)
+
+	args = frappe._dict(args)
+
+	contact = frappe.get_doc("Contact", args.contact)
+
+	old_email_id_row = frappe.db.get_value("Contact Email", {"parent": args.contact, "email_id": contact.email_id})
+	old_mobile_no_row = frappe.db.get_value("Contact Phone", {"parent": args.contact, "phone": contact.mobile_no})
+
+	frappe.db.set_value("Contact Email", old_email_id_row, "email_id", args.email_id)
+	frappe.db.set_value("Contact Phone", old_mobile_no_row, "phone", args.mobile_no)
+
+	contact.reload()
+
+	contact.set_primary_email()
+	contact.set_primary("mobile_no")
+
+	contact.save(ignore_permissions=True)
+
+	return {"email_id": args.email_id, "mobile_no": args.mobile_no}
