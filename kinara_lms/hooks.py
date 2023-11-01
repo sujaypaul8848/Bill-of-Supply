@@ -126,6 +126,9 @@ doc_events = {
 	"Address": {
 		"validate": "kinara_lms.overrides.address.map_kinara_state_to_system_state",
 	},
+	"Contact": {
+		"validate": "kinara_lms.overrides.contact.validate_contact",
+	},
 	"Loan": {
 		"after_insert": "kinara_lms.overrides.loan.created_loan_related_docs",
 		"autoname": "kinara_lms.overrides.loan.override_name"

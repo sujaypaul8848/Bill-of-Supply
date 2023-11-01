@@ -29,7 +29,7 @@ KINARA_CUSTOM_FIELDS = {
 			"fieldname": "processing_fee_billing",
 			"label": "Processing Fee Billing (against partner share)",
 			"fieldtype": "Percent",
-			"insert_after": "servicer_fee",
+			"insert_after": "column_break_xlvh",
 		},
 	],
 	"Item": [
