@@ -124,7 +124,7 @@ doc_events = {
 		"validate": "kinara_lms.overrides.loan_product.validate_loan_product_code",
 	},
 	"Address": {
-		"validate": "kinara_lms.overrides.address.map_kinara_state_to_system_state",
+		"validate": "kinara_lms.overrides.address.kinara_address_validate",
 	},
 	"Contact": {
 		"validate": "kinara_lms.overrides.contact.validate_contact",

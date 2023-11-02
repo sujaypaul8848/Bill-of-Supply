@@ -34,11 +34,24 @@ KINARA_CUSTOM_FIELDS = {
 	],
 	"Item": [
 		{
+			"fieldname": "kinara_details_tab",
+			"label": "Kinara Details",
+			"fieldtype": "Tab Break",
+			"insert_after": "total_projected_qty",
+		},
+		{
 			"default": "0",
 			"fieldname": "tax_inclusive",
 			"label": "Tax Inclusive",
 			"fieldtype": "Check",
-			"insert_after": "stock_uom",
+			"insert_after": "kinara_details_tab",
+		},
+		{
+			"default": "0",
+			"fieldname": "is_processing_fee",
+			"label": "Is Processing Fee",
+			"fieldtype": "Check",
+			"insert_after": "tax_inclusive",
 		},
 	],
 	"Loan Disbursement": [

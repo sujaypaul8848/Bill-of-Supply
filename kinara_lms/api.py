@@ -155,11 +155,22 @@ def update_contact(args):
 
 	contact = frappe.get_doc("Contact", args.contact)
 
-	old_email_id_row = frappe.db.get_value("Contact Email", {"parent": args.contact, "email_id": contact.email_id})
-	old_mobile_no_row = frappe.db.get_value("Contact Phone", {"parent": args.contact, "phone": contact.mobile_no})
+	if not contact:
+		return
 
-	frappe.db.set_value("Contact Email", old_email_id_row, "email_id", args.email_id)
-	frappe.db.set_value("Contact Phone", old_mobile_no_row, "phone", args.mobile_no)
+	old_email_id_row = frappe.db.get_value("Contact Email", {"parent": args.contact, "email_id": contact.email_id})
+	if old_email_id_row and args.email_id:
+		frappe.db.set_value("Contact Email", old_email_id_row, "email_id", args.email_id)
+	elif args.email_id:
+		contact.append("email_ids", {"email_id": args.email_id, "is_primary": 1})
+		contact.save(ignore_permissions=True)
+
+	old_mobile_no_row = frappe.db.get_value("Contact Phone", {"parent": args.contact, "phone": contact.mobile_no})
+	if old_mobile_no_row and args.mobile_no:
+		frappe.db.set_value("Contact Phone", old_mobile_no_row, "phone", args.mobile_no)
+	elif args.mobile_no:
+		contact.append("phone_nos", {"phone": args.mobile_no, "is_primary_mobile_no": 1})
+		contact.save(ignore_permissions=True)
 
 	contact.reload()
 
