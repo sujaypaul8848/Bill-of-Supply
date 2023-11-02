@@ -164,6 +164,10 @@ def update_contact(args):
 	elif args.email_id:
 		contact.append("email_ids", {"email_id": args.email_id, "is_primary": 1})
 		contact.save(ignore_permissions=True)
+	elif "email_id" in args and not args.email_id:
+		frappe.db.delete("Contact Email", {"parent": args.contact})
+		contact.email_ids = []
+		contact.save(ignore_permissions=True)
 
 	old_mobile_no_row = frappe.db.get_value("Contact Phone", {"parent": args.contact, "phone": contact.mobile_no})
 	if old_mobile_no_row and args.mobile_no:
@@ -171,6 +175,14 @@ def update_contact(args):
 	elif args.mobile_no:
 		contact.append("phone_nos", {"phone": args.mobile_no, "is_primary_mobile_no": 1})
 		contact.save(ignore_permissions=True)
+		for customer in frappe.db.get_all("Dynamic Link", filters={"parenttype": "Contact", "link_doctype": "Customer", "parent": args.contact}, pluck="link_name"):
+			frappe.db.set_value("Customer", customer, "mobile_no", args.mobile_no)
+	elif "mobile_no" in args and not args.mobile_no:
+		frappe.db.delete("Contact Phone", {"parent": args.contact})
+		contact.phone_nos = []
+		contact.save(ignore_permissions=True)
+		for customer in frappe.db.get_all("Dynamic Link", filters={"parenttype": "Contact", "link_doctype": "Customer", "parent": args.contact}, pluck="link_name"):
+			frappe.db.set_value("Customer", customer, "mobile_no", "")
 
 	contact.reload()
 
