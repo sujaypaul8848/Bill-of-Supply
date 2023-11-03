@@ -15,5 +15,5 @@ kinara_lms.patches.v15_0.create_loan_disbursement_custom_fields #1
 kinara_lms.patches.v15_0.create_cin_number_in_company
 kinara_lms.patches.v15_0.create_loan_security_custom_fields
 kinara_lms.patches.v15_0.update_loan_security_custom_fields_insert_after
-kinara_lms.patches.v15_0.create_loan_partner_custom_fields
+kinara_lms.patches.v15_0.create_loan_partner_custom_fields #1
 kinara_lms.patches.v15_0.create_item_custom_fields

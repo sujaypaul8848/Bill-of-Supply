@@ -12,6 +12,14 @@ frappe.ui.form.on("Loan Partner", {
             }
         });
     },
+
+    kinara_security_emi_partner_ratio: function(frm) {
+		frm.set_value("kinara_security_emi_own_ratio", 100 - frm.doc.kinara_security_emi_partner_ratio);
+	},
+
+	kinara_security_emi_own_ratio: function(frm) {
+		frm.set_value("kinara_security_emi_partner_ratio", 100 - frm.doc.kinara_security_emi_own_ratio);
+	},
 });
 
 frappe.ui.form.on('Loan Partner Shareable', {

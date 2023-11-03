@@ -26,10 +26,37 @@ KINARA_CUSTOM_FIELDS = {
 	],
 	"Loan Partner": [
 		{
+			"fieldname": "kinara_details_section",
+			"label": "Kinara Details",
+			"fieldtype": "Section Break",
+			"insert_after": "partial_payment_mechanism"
+		},
+		{
 			"fieldname": "processing_fee_billing",
 			"label": "Processing Fee Billing (against partner share)",
 			"fieldtype": "Percent",
-			"insert_after": "column_break_xlvh",
+			"insert_after": "kinara_details_section",
+		},
+		{
+			"default": "0",
+			"fieldname": "kinara_security_emi_shared",
+			"label": "Security EMI shared",
+			"fieldtype": "Check",
+			"insert_after": "processing_fee_billing",
+		},
+		{
+			"fieldname": "kinara_security_emi_partner_ratio",
+			"fieldtype": "Percent",
+			"label": "Security EMI Partner Ratio",
+			"depends_on": "eval:doc.kinara_security_emi_shared;",
+			"insert_after": "kinara_security_emi_shared",
+		},
+		{
+			"fieldname": "kinara_security_emi_own_ratio",
+			"fieldtype": "Percent",
+			"label": "Security EMI Own Ratio",
+			"depends_on": "eval:doc.kinara_security_emi_shared;",
+			"insert_after": "kinara_security_emi_partner_ratio",
 		},
 	],
 	"Item": [

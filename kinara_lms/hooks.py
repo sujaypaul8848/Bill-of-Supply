@@ -132,7 +132,10 @@ doc_events = {
 	"Loan": {
 		"after_insert": "kinara_lms.overrides.loan.created_loan_related_docs",
 		"autoname": "kinara_lms.overrides.loan.override_name"
-	}
+	},
+	"Loan Partner": {
+		"validate": "kinara_lms.overrides.loan_partner.validate_loan_partner",
+	},
 }
 
 # Scheduled Tasks
