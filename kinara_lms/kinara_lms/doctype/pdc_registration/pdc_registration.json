@@ -11,12 +11,12 @@
   "type",
   "loan_repayment_schedule",
   "loan",
-  "status",
+  "cheque_date",
   "column_break_hz2h",
+  "emi",
   "cheque_number",
   "amount",
-  "cheque_date",
-  "emi"
+  "status"
  ],
  "fields": [
   {
@@ -80,7 +80,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-10 18:11:22.488818",
+ "modified": "2023-11-13 15:03:00.146842",
  "modified_by": "Administrator",
  "module": "Kinara LMS",
  "name": "PDC Registration",

@@ -8,7 +8,7 @@ from frappe.model.document import Document
 class PDCRegistration(Document):
 	def validate(self):
 		if self.type == "PDC":
-			if self.emi == []:
+			if self.emi is None:
 				frappe.throw("EMI is Mandatory")
 			if self.loan_repayment_schedule is None:
 				frappe.throw("Loan Repayment Schedule is Mandatory")
