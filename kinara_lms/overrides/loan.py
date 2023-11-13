@@ -92,16 +92,16 @@ def override_name(doc, method=None):
 def validate_customer_type(doc, method=None):
 	if doc.applicant_type == "Customer":
 		if frappe.db.get_value('Customer', doc.applicant, 'customer_type') == "Individual":
-			frappe.throw(f"Entity Type Cannot Be Individual {doc.applicant}")
+			frappe.throw(f"Entity Type Cannot Be Individual: {doc.applicant}")
 
 		if doc.custom_applicant:
 			if frappe.db.get_value('Customer', doc.custom_applicant, 'customer_type') != "Individual":
-				frappe.throw(f"Applicant Type Should Be Individual {doc.custom_applicant}")
+				frappe.throw(f"Applicant Type Should Be Individual: {doc.custom_applicant}")
 
 		for co_applicant in doc.custom_co_applicants:
 			if frappe.db.get_value('Customer', co_applicant.co_applicant, 'customer_type') != "Individual":
-				frappe.throw(f"Co Applicant Type Should Be Individual {co_applicant.co_applicant}")
+				frappe.throw(f"Co Applicant Type Should Be Individual: {co_applicant.co_applicant}")
 
 		for guarantor in doc.custom_guarantors:
 			if frappe.db.get_value('Customer', guarantor.guarantors, 'customer_type') != "Individual":
-				frappe.throw(f"Gurantor Type Should Be Individual {guarantor.guarantors}")
+				frappe.throw(f"Gurantor Type Should Be Individual: {guarantor.guarantors}")
