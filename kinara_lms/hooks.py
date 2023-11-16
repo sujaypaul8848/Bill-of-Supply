@@ -233,7 +233,7 @@ fixtures = [
     {"dt": "Custom Field", "filters": [
         [
             "name", "in", [
-                "Loan-custom_applicant",
+                "Loan-custom_individual_applicant",
                 "Loan-custom_guarantors",
                 "Loan-custom_co_applicants"
                

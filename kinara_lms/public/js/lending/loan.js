@@ -1,33 +1,25 @@
+function applyFilter(frm, field, filtersList){
+    frm.set_query(field, () => {
+        return {
+            filters: filtersList
+        }
+    });
+}
+
+function applyChildTableFilter(frm, childTable, field, filtersList){
+    frm.fields_dict[childTable].grid.get_field(field).get_query = function(doc, cdt, cdn) {
+        return {
+            filters: filtersList
+        };
+    };
+}
+
 frappe.ui.form.on("Loan", {
     refresh(frm){
-        frm.set_query('applicant', () => {
-            return {
-                filters: [
-                    ["customer_type", "!=", "Individual"]
-                ]
-            }
-        });
-        frm.set_query('custom_applicant', () => {
-            return {
-                filters: {
-                    customer_type: "Individual"
-                }
-            }
-        });
-        frm.fields_dict['custom_co_applicants'].grid.get_field('co_applicant').get_query = function(doc, cdt, cdn) {
-            return {
-                filters: {
-                    customer_type: "Individual"
-                }
-            };
-        };
-        frm.fields_dict['custom_guarantors'].grid.get_field('guarantors').get_query = function(doc, cdt, cdn) {
-            return {
-                filters: {
-                    customer_type: "Individual"
-                }
-            };
-        };
+        applyFilter(frm, "applicant", [["customer_type", "!=", "Individual"]])
+        applyFilter(frm, "custom_individual_applicant", [["customer_type", "=", "Individual"]])
+        applyChildTableFilter(frm, 'custom_co_applicants', 'co_applicant', [["customer_type", "=", "Individual"]])
+        applyChildTableFilter(frm, 'custom_guarantors', 'guarantors', [["customer_type", "=", "Individual"]])
         
     }
 })
