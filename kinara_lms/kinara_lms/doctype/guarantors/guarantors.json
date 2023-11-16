@@ -1,0 +1,32 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-11-07 15:17:29.698264",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "guarantors"
+ ],
+ "fields": [
+  {
+   "fieldname": "guarantors",
+   "fieldtype": "Link",
+   "label": "Guarantors",
+   "options": "Customer"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-11-07 15:25:44.200256",
+ "modified_by": "Administrator",
+ "module": "Kinara LMS",
+ "name": "Guarantors",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

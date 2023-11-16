@@ -1,0 +1,195 @@
+{
+ "actions": [],
+ "autoname": "field:ach_registration_number",
+ "creation": "2023-11-07 12:38:05.632941",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "ach_registration_number",
+  "section_break_cuw8",
+  "loan",
+  "mandate_open_date",
+  "frequency",
+  "reference_1",
+  "column_break_ivpd",
+  "ach_start_date",
+  "max_ach_amount",
+  "primary_mobile_number",
+  "reference_2",
+  "section_break_pe8z",
+  "account_holder_name",
+  "bank_account_number",
+  "bank_name",
+  "branch_name",
+  "sponsor_bank_code",
+  "utility_code",
+  "column_break_xkv0",
+  "account_type",
+  "ifsc_code",
+  "micr",
+  "bank_city",
+  "email_id",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "ach_registration_number",
+   "fieldtype": "Data",
+   "label": "ACH Registration Number",
+   "unique": 1
+  },
+  {
+   "fieldname": "section_break_cuw8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "loan",
+   "fieldtype": "Link",
+   "label": "Loan",
+   "options": "Loan"
+  },
+  {
+   "fieldname": "mandate_open_date",
+   "fieldtype": "Date",
+   "label": "Mandate Open Date"
+  },
+  {
+   "fieldname": "column_break_ivpd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ach_start_date",
+   "fieldtype": "Date",
+   "label": "ACH Start Date"
+  },
+  {
+   "fieldname": "max_ach_amount",
+   "fieldtype": "Data",
+   "label": "Max ACH Amount"
+  },
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Select",
+   "label": "Frequency",
+   "options": "Week\nFortnight\nQuarter\nHalf year\nMonth Year"
+  },
+  {
+   "fieldname": "reference_1",
+   "fieldtype": "Data",
+   "label": "Reference 1"
+  },
+  {
+   "fieldname": "primary_mobile_number",
+   "fieldtype": "Data",
+   "label": "Primary Mobile Number"
+  },
+  {
+   "fieldname": "reference_2",
+   "fieldtype": "Data",
+   "label": "Reference 2"
+  },
+  {
+   "fieldname": "section_break_pe8z",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "account_holder_name",
+   "fieldtype": "Data",
+   "label": "Account Holder Name"
+  },
+  {
+   "fieldname": "bank_name",
+   "fieldtype": "Data",
+   "label": "Bank Name"
+  },
+  {
+   "fieldname": "bank_account_number",
+   "fieldtype": "Link",
+   "label": "Bank Account Number",
+   "options": "Bank Account"
+  },
+  {
+   "fieldname": "branch_name",
+   "fieldtype": "Data",
+   "label": "Branch Name"
+  },
+  {
+   "fieldname": "sponsor_bank_code",
+   "fieldtype": "Data",
+   "label": "Sponsor Bank Code"
+  },
+  {
+   "fieldname": "utility_code",
+   "fieldtype": "Data",
+   "label": "Utility Code"
+  },
+  {
+   "fieldname": "column_break_xkv0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "account_type",
+   "fieldtype": "Select",
+   "label": "Account Type",
+   "options": "Current\nSavings\nCash Credit"
+  },
+  {
+   "fetch_from": "bank_account_number.custom_ifsc_code",
+   "fieldname": "ifsc_code",
+   "fieldtype": "Data",
+   "label": "IFSC Code"
+  },
+  {
+   "fieldname": "micr",
+   "fieldtype": "Data",
+   "label": "MICR"
+  },
+  {
+   "fieldname": "bank_city",
+   "fieldtype": "Data",
+   "label": "Bank City"
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email ID"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "ACH Registration",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-11-09 18:54:17.253973",
+ "modified_by": "Administrator",
+ "module": "Kinara LMS",
+ "name": "ACH Registration",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -30,6 +30,7 @@ app_license = "MIT"
 # include js in doctype views
 doctype_js = {
 	"Loan Partner": "public/js/lending/loan_partner.js",
+	"Loan": "public/js/lending/loan.js",
 }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
@@ -131,7 +132,8 @@ doc_events = {
 	},
 	"Loan": {
 		"after_insert": "kinara_lms.overrides.loan.created_loan_related_docs",
-		"autoname": "kinara_lms.overrides.loan.override_name"
+		"autoname": "kinara_lms.overrides.loan.override_name",
+		"validate": "kinara_lms.overrides.loan.validate_customer_type",
 	},
 	"Loan Partner": {
 		"validate": "kinara_lms.overrides.loan_partner.validate_loan_partner",
@@ -227,3 +229,14 @@ doc_events = {
 # auth_hooks = [
 #	"kinara_lms.auth.validate"
 # ]
+fixtures = [
+    {"dt": "Custom Field", "filters": [
+        [
+            "name", "in", [
+                "Loan-custom_individual_applicant",
+                "Loan-custom_guarantors",
+                "Loan-custom_co_applicants",
+            ]
+        ]
+    ]}
+]
