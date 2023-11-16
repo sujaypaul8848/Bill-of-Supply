@@ -235,8 +235,7 @@ fixtures = [
             "name", "in", [
                 "Loan-custom_individual_applicant",
                 "Loan-custom_guarantors",
-                "Loan-custom_co_applicants"
-               
+                "Loan-custom_co_applicants",
             ]
         ]
     ]}
