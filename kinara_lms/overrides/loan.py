@@ -93,9 +93,9 @@ def validate_customer_type(doc, method=None):
 	if frappe.db.get_value('Customer', doc.applicant, 'customer_type') == "Individual":
 		frappe.throw(f"Entity Type Cannot Be Individual: {doc.applicant}")
 
-	if doc.custom_applicant:
-		if frappe.db.get_value('Customer', doc.custom_applicant, 'customer_type') != "Individual":
-			frappe.throw(f"Applicant Type Should Be Individual: {doc.custom_applicant}")
+	if doc.custom_individual_applicant:
+		if frappe.db.get_value('Customer', doc.custom_individual_applicant, 'customer_type') != "Individual":
+			frappe.throw(f"Applicant Type Should Be Individual: {doc.custom_individual_applicant}")
 
 	for co_applicant in doc.custom_co_applicants:
 		if frappe.db.get_value('Customer', co_applicant.co_applicant, 'customer_type') != "Individual":
