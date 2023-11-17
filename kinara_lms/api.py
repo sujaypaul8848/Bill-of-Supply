@@ -192,3 +192,19 @@ def update_contact(args):
 	contact.save(ignore_permissions=True)
 
 	return {"email_id": args.email_id, "mobile_no": args.mobile_no}
+
+
+@frappe.whitelist()
+def get_installments_repayment_schedule(**kwargs):
+	doc = frappe.get_doc("Loan Repayment Schedule", kwargs["id"])
+	installments = []
+	for installment in doc.repayment_schedule:
+		installments.append({
+			"installment_date": installment.payment_date,
+			"principal": installment.principal_amount,
+			"interest": installment.interest_amount,
+			"emi": installment.total_payment,
+			"os_principal": installment.balance_loan_amount,
+			"is_bpi": installment.is_accrued,
+		})
+	return {"installments": installments}
