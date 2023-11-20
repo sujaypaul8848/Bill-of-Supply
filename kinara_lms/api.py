@@ -197,14 +197,11 @@ def update_contact(args):
 @frappe.whitelist()
 def get_installments_repayment_schedule(**kwargs):
 	doc = frappe.get_doc("Loan Repayment Schedule", kwargs["id"])
-	installments = []
-	for installment in doc.repayment_schedule:
-		installments.append({
-			"installment_date": installment.payment_date,
-			"principal": installment.principal_amount,
-			"interest": installment.interest_amount,
-			"emi": installment.total_payment,
-			"os_principal": installment.balance_loan_amount,
-			"is_bpi": installment.is_accrued,
-		})
-	return {"installments": installments}
+	installments = {
+		"installments" :
+       		[ 
+				{"installment_date" : "<>", "principal" : "<>", "interest" : "<>", "emi" : "<>", "os_principal" : "<>", "is_bpi": "<>"},
+           		{"installment_date" : "<>", "principal" : "<>", "interest" : "<>", "emi" : "<>", "os_principal" : "<>", "is_bpi": "<>"}
+      		]
+	}
+	return installments
