@@ -200,8 +200,7 @@ def get_installments_repayment_schedule(**kwargs):
 	installments = {
 		"installments" :
        		[ 
-				{"installment_date" : "<>", "principal" : "<>", "interest" : "<>", "emi" : "<>", "os_principal" : "<>", "is_bpi": "<>"},
-           		{"installment_date" : "<>", "principal" : "<>", "interest" : "<>", "emi" : "<>", "os_principal" : "<>", "is_bpi": "<>"}
+				{"installment_date" : "<>", "principal" : "<>", "interest" : "<>", "emi" : "<>", "os_principal" : "<>", "is_bpi": "<>"}
       		]
 	}
 	return installments
