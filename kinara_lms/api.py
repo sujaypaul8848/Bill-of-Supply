@@ -198,8 +198,9 @@ def update_contact(args):
 def get_installments_repayment_schedule(**kwargs):
 	installments = {
 		"installments" :
-       		[ 
-				{"installment_date" : "23/10/2023", "principal" : 7537.05, "interest" : 1347.95, "emi" : 8885.00, "os_principal" : 92462.95, "is_bpi": 1}
+       		[
+				{"installment_date" : "23/10/2023", "principal" : 7537.05, "interest" : 1347.95, "emi" : 8885.00, "os_principal" : 92462.95, "is_bpi": 1},
+				{"installment_date" : "23/11/2023", "principal" : 7500.00, "interest" : 1385.000, "emi" : 8885.00, "os_principal" : 84925.90, "is_bpi": 0}
       		]
 	}
 	return installments
