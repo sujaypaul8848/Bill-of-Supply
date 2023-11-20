@@ -196,7 +196,6 @@ def update_contact(args):
 
 @frappe.whitelist()
 def get_installments_repayment_schedule(**kwargs):
-	doc = frappe.get_doc("Loan Repayment Schedule", kwargs["id"])
 	installments = {
 		"installments" :
        		[ 
