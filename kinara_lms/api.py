@@ -204,3 +204,16 @@ def get_installments_repayment_schedule(**kwargs):
       		]
 	}
 	return installments
+
+@frappe.whitelist()
+def get_max_tax_rate(**kwargs):
+	doc = frappe.get_doc("GST HSN Code", kwargs["HSN Code"])
+	if not doc.taxes:
+		frappe.throw("No Item Tax Template Available")
+	first_item_tax_template = doc.taxes[0].item_tax_template
+	doc = frappe.get_doc("Item Tax Template", first_item_tax_template)
+	max_tax_rate = doc.taxes[0].tax_rate
+	for tax in doc.taxes:
+		if tax.tax_rate > max_tax_rate:
+			max_tax_rate = tax.tax_rate
+	return {"max_tax_rate" : max_tax_rate}
