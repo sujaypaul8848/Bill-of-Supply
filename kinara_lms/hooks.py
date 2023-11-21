@@ -229,20 +229,18 @@ doc_events = {
 # auth_hooks = [
 #	"kinara_lms.auth.validate"
 # ]
-# fixtures = [
-#     {"dt": "Custom Field", "filters": [
-#         [
-#             "name", "in", [
-#                 "Loan-custom_individual_applicant",
-#                 "Loan-custom_guarantors",
-#                 "Loan-custom_co_applicants",
-#             ]
-#         ]
-#     ]}
-# ]
-
 fixtures = [
-    {"dt": "Property Setter", "filters": [
+    {"dt": "Custom Field", "filters": [
+        [
+            "name", "in", [
+                "Loan-custom_individual_applicant",
+                "Loan-custom_guarantors",
+                "Loan-custom_co_applicants",
+                "Loan-custom_channel_partner",
+            ]
+        ]
+    ]},
+	{"dt": "Property Setter", "filters": [
         [
             "name", "in", [
                 "Customer-customer_type-options",
