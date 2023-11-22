@@ -193,6 +193,7 @@ def update_contact(args):
 
 	return {"email_id": args.email_id, "mobile_no": args.mobile_no}
 
+
 @frappe.whitelist()
 def get_installments_repayment_schedule(**kwargs):
 	installments = {
