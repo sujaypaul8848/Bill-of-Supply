@@ -138,6 +138,9 @@ doc_events = {
 	"Loan Partner": {
 		"validate": "kinara_lms.overrides.loan_partner.validate_loan_partner",
 	},
+	"Sales Invoice": {
+		"validate": "kinara_lms.kinara_lms.doctype.sales_invoice.sales_invoice.validate",
+	},
 }
 
 # Scheduled Tasks
