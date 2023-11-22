@@ -204,3 +204,4 @@ def get_installments_repayment_schedule(**kwargs):
       		]
 	}
 	return installments
+
