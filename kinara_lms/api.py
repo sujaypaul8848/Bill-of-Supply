@@ -212,5 +212,5 @@ def get_max_tax_rate(**kwargs):
 		frappe.throw("No Item Tax Template Available")
 	first_item_tax_template = doc.taxes[0].item_tax_template
 	doc = frappe.get_doc("Item Tax Template", first_item_tax_template)
-	max_tax_rate = max(tax.tax_rate for tax in doc.taxes)
+	max_tax_rate = max((tax.tax_rate for tax in doc.taxes), default=None)
 	return {"max_tax_rate" : max_tax_rate}
