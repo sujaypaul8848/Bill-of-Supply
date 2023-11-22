@@ -239,5 +239,12 @@ fixtures = [
                 "Loan-custom_channel_partner",
             ]
         ]
+    ]},
+	{"dt": "Property Setter", "filters": [
+        [
+            "name", "in", [
+                "Customer-customer_type-options",
+            ]
+        ]
     ]}
 ]
