@@ -139,7 +139,7 @@ doc_events = {
 		"validate": "kinara_lms.overrides.loan_partner.validate_loan_partner",
 	},
 	"Sales Invoice": {
-		"validate": "kinara_lms.kinara_lms.doctype.sales_invoice.sales_invoice.validate",
+		"before_save": "kinara_lms.overrides.sales_invoice.before_save",
 	},
 }
 
@@ -240,6 +240,10 @@ fixtures = [
                 "Loan-custom_guarantors",
                 "Loan-custom_co_applicants",
                 "Loan-custom_channel_partner",
+				"Sales Invoice-custom_loan_details",
+				"Sales Invoice-custom_applicant_name",
+				"Sales Invoice-custom_applicant_mobile_no",
+				"Sales Invoice-custom_column_break_fkvbq"
             ]
         ]
     ]},
@@ -247,6 +251,7 @@ fixtures = [
         [
             "name", "in", [
                 "Customer-customer_type-options",
+				"Sales Invoice-main-field_order"
             ]
         ]
     ]}
