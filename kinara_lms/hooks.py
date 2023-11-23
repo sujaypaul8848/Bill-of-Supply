@@ -236,22 +236,22 @@ fixtures = [
     {"dt": "Custom Field", "filters": [
         [
             "name", "in", [
-                "Loan-custom_individual_applicant",
-                "Loan-custom_guarantors",
-                "Loan-custom_co_applicants",
-                "Loan-custom_channel_partner",
-			    "Sales Invoice-custom_loan_details",
-			    "Sales Invoice-custom_applicant_name",
-			    "Sales Invoice-custom_applicant_mobile_no",
-			    "Sales Invoice-custom_column_break_fkvbq"
+            	"Loan-custom_individual_applicant",
+            	"Loan-custom_guarantors",
+            	"Loan-custom_co_applicants",
+            	"Loan-custom_channel_partner",
+				"Sales Invoice-custom_loan_details",
+				"Sales Invoice-custom_applicant_name",
+				"Sales Invoice-custom_applicant_mobile_no",
+				"Sales Invoice-custom_column_break_fkvbq"
             ]
         ]
     ]},
 	{"dt": "Property Setter", "filters": [
         [
             "name", "in", [
-                "Customer-customer_type-options",
-			    "Sales Invoice-main-field_order"
+            	"Customer-customer_type-options",
+				"Sales Invoice-main-field_order"
             ]
         ]
     ]}
