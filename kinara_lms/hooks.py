@@ -138,6 +138,9 @@ doc_events = {
 	"Loan Partner": {
 		"validate": "kinara_lms.overrides.loan_partner.validate_loan_partner",
 	},
+	"Sales Invoice": {
+		"before_save": "kinara_lms.overrides.sales_invoice.before_save",
+	},
 }
 
 # Scheduled Tasks
@@ -233,17 +236,22 @@ fixtures = [
     {"dt": "Custom Field", "filters": [
         [
             "name", "in", [
-                "Loan-custom_individual_applicant",
-                "Loan-custom_guarantors",
-                "Loan-custom_co_applicants",
-                "Loan-custom_channel_partner",
+				"Loan-custom_individual_applicant",
+				"Loan-custom_guarantors",
+				"Loan-custom_co_applicants",
+				"Loan-custom_channel_partner",
+				"Sales Invoice-custom_loan_details",
+				"Sales Invoice-custom_applicant_name",
+				"Sales Invoice-custom_applicant_mobile_no",
+				"Sales Invoice-custom_column_break_fkvbq"
             ]
         ]
     ]},
 	{"dt": "Property Setter", "filters": [
         [
             "name", "in", [
-                "Customer-customer_type-options",
+				"Customer-customer_type-options",
+				"Sales Invoice-main-field_order"
             ]
         ]
     ]}
