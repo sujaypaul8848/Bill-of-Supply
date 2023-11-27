@@ -286,7 +286,7 @@ fixtures = [
 				"Gender-main-naming_rule",
 				"Gender-main-autoname",
 				"Gender-main-field_order",
-                "Loan Purpose-main-field_order",
+				"Loan Purpose-main-field_order",
 				"Loan Purpose-title-hidden",
 				"Loan Purpose-main-naming_rule",
 				"Loan Purpose-main-autoname",
