@@ -69,8 +69,8 @@ def create_collateral(args):
 	loan_security_assignment = frappe.new_doc("Loan Security Assignment")
 	loan_security_assignment.applicant_type = args.applicant_type
 	loan_security_assignment.applicant = args.applicant
-	loan_security_assignment.applicant_type = args.collateral_owner_type
-	loan_security_assignment.applicant = args.collateral_owner
+	loan_security_assignment.security_owner_type = args.collateral_owner_type
+	loan_security_assignment.security_owner = args.collateral_owner
 
 	loan_security_assignment.append("securities", {
 		"loan_security": loan_security.name,
@@ -192,16 +192,3 @@ def update_contact(args):
 	contact.save(ignore_permissions=True)
 
 	return {"email_id": args.email_id, "mobile_no": args.mobile_no}
-
-
-@frappe.whitelist()
-def get_installments_repayment_schedule(**kwargs):
-	installments = {
-		"installments" :
-       		[
-				{"installment_date" : "23/10/2023", "principal" : 7537.05, "interest" : 1347.95, "emi" : 8885.00, "os_principal" : 92462.95, "is_bpi": 1},
-				{"installment_date" : "23/11/2023", "principal" : 7500.00, "interest" : 1385.000, "emi" : 8885.00, "os_principal" : 84925.90, "is_bpi": 0}
-      		]
-	}
-	return installments
-
