@@ -233,8 +233,8 @@ doc_events = {
 #	"kinara_lms.auth.validate"
 # ]
 fixtures = [
-    {"dt": "Custom Field", "filters": [
-        [
+	{"dt": "Custom Field", "filters": [
+		[
 			"name", "in", [
 				"Loan-custom_individual_applicant",
 				"Loan-custom_guarantors",
@@ -262,12 +262,12 @@ fixtures = [
 				"Loan Sub Purpose-custom_type_id",
 				"Loan Sub Purpose-custom_value",
 				"Loan Sub Purpose-custom_category_type",
-            ]
-        ]
-    ]},
+			]
+		]
+	]},
 	{"dt": "Property Setter", "filters": [
-        [
-            "name", "in", [
+		[
+			"name", "in", [
 				"Customer-customer_type-options",
 				"Sales Invoice-main-field_order",
 				"Registration Type-main-naming_rule",
@@ -294,7 +294,7 @@ fixtures = [
 				"Loan Sub Purpose-main-autoname",
 				"Loan Sub Purpose-main-field_order",
 				"Loan Sub Purpose-title-hidden",
-            ]
-        ]
-    ]}
+			]
+		]
+	]}
 ]
