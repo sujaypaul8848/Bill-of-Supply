@@ -233,9 +233,9 @@ doc_events = {
 #	"kinara_lms.auth.validate"
 # ]
 fixtures = [
-    {"dt": "Custom Field", "filters": [
-        [
-            "name", "in", [
+	{"dt": "Custom Field", "filters": [
+		[
+			"name", "in", [
 				"Loan-custom_individual_applicant",
 				"Loan-custom_guarantors",
 				"Loan-custom_co_applicants",
@@ -243,16 +243,58 @@ fixtures = [
 				"Sales Invoice-custom_loan_details",
 				"Sales Invoice-custom_applicant_name",
 				"Sales Invoice-custom_applicant_mobile_no",
-				"Sales Invoice-custom_column_break_fkvbq"
-            ]
-        ]
-    ]},
+				"Sales Invoice-custom_column_break_fkvbq",
+				"Registration Type-custom_type_id",
+				"Registration Type-custom_value",
+				"Registration Type-custom_category_type",
+				"Bank Account Type-custom_type_id",
+				"Bank Account Type-custom_value",
+				"Bank Account Type-custom_category_type",
+				"Salutation-custom_type_id",
+				"Salutation-custom_value",
+				"Salutation-custom_category_type",
+				"Gender-custom_type_id",
+				"Gender-custom_value",
+				"Gender-custom_category_type",
+				"Loan Purpose-custom_type_id",
+				"Loan Purpose-custom_value",
+				"Loan Purpose-custom_category_type",
+				"Loan Sub Purpose-custom_type_id",
+				"Loan Sub Purpose-custom_value",
+				"Loan Sub Purpose-custom_category_type",
+			]
+		]
+	]},
 	{"dt": "Property Setter", "filters": [
-        [
-            "name", "in", [
+		[
+			"name", "in", [
 				"Customer-customer_type-options",
-				"Sales Invoice-main-field_order"
-            ]
-        ]
-    ]}
+				"Sales Invoice-main-field_order",
+				"Registration Type-main-naming_rule",
+				"Registration Type-main-autoname",
+				"Registration Type-main-field_order",
+				"Registration Type-title-hidden",
+				"Bank Account Type-main-naming_rule",
+				"Bank Account Type-main-autoname",
+				"Bank Account Type-main-field_order",
+				"Bank Account Type-account_type-hidden",
+				"Salutation-main-field_order",
+				"Salutation-salutation-hidden",
+				"Salutation-main-naming_rule",
+				"Salutation-main-autoname",
+				"Gender-gender-hidden",
+				"Gender-main-naming_rule",
+				"Gender-main-autoname",
+				"Gender-main-field_order",
+				"Loan Purpose-main-field_order",
+				"Loan Purpose-title-hidden",
+				"Loan Purpose-main-naming_rule",
+				"Loan Purpose-main-autoname",
+				"Loan Sub Purpose-main-naming_rule",
+				"Loan Sub Purpose-main-autoname",
+				"Loan Sub Purpose-main-field_order",
+				"Loan Sub Purpose-title-hidden",
+			]
+		]
+	]}
 ]
