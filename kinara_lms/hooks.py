@@ -294,6 +294,10 @@ fixtures = [
 				"Loan Sub Purpose-main-autoname",
 				"Loan Sub Purpose-main-field_order",
 				"Loan Sub Purpose-title-hidden",
+				"Loan Product-mode_of_payment-default",
+				"Loan Product-mode_of_payment-hidden",
+				"Loan Product-mode_of_payment-read_only",
+				"Loan Product-main-field_order",
 			]
 		]
 	]}
