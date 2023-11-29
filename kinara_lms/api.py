@@ -42,6 +42,35 @@ def create_charge(args):
 
 
 @frappe.whitelist()
+def update_charge(args):
+	if isinstance(args, str):
+		args = json.loads(args)
+
+	args = frappe._dict(args)
+	
+	charge = frappe.get_doc("Item", args.charge_code)
+
+	if args.charge_name:
+		charge.item_name = args.charge_name
+	if args.gst_hsn_code:
+		charge.gst_hsn_code = args.gst_hsn_code
+	if args.tax_inclusive:
+		charge.tax_inclusive = args.tax_inclusive
+	if "tax_applicable" in args:
+		if args.tax_applicable:
+			charge.is_nil_exempt = 0
+			if not charge.taxes:
+				charge.append("taxes", {"item_tax_template": "GST 18% - KCPL"})
+		else:
+			charge.is_nil_exempt = 1
+			charge.taxes = []
+	
+	charge.save()
+
+	return charge
+
+
+@frappe.whitelist()
 def create_collateral(args):
 	if isinstance(args, str):
 		args = json.loads(args)
