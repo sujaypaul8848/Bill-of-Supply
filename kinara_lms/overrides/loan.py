@@ -54,36 +54,20 @@ def created_loan_related_docs(doc, method=None):
 		loan_security_assignment.security_owner = doc.get("collateral_owner")
 
 		for d in doc.get("collateral_details") or []:
-			security = frappe.new_doc("Loan Security")
-			security.loan_security_code = d.get("collateral_id")
-			security.loan_security_name = d.get("collateral_name")
-			security.unit_of_measure = "Nos",
-			security.loan_security_type = "Property"
-
-			security.kinara_collateral_type = d.get("kinara_collateral_type")
-			security.kinara_collateral_subtype = d.get("kinara_collateral_subtype")
-			security.kinara_collateral_ltv_amount = d.get("kinara_collateral_ltv_amount")
-			security.kinara_collateral_condition = d.get("kinara_collateral_condition")
-			security.kinara_description = d.get("kinara_description")
-			security.kinara_manufacturer_name = d.get("kinara_manufacturer_name")
-			security.kinara_model_number = d.get("kinara_model_number")
-			security.kinara_serial_number = d.get("kinara_serial_number")
-			security.kinara_entity_urn = d.get("kinara_entity_urn")
-			security.kinara_cersai_charge_required = d.get("kinara_cersai_charge_required")
-
-			security.save()
-
 			loan_security_assignment.append("securities", {
-				"loan_security": security.name,
+				"loan_security": d.get("collateral_id"),
 				"qty": 1,
-				"loan_security_price": d.get("collateral_value"),
+				"loan_security_price": frappe.db.get_value("Loan Security", d.get("collateral_id"), "kinara_collateral_value"),
 			})
+
+			loan_security_assignment.insert()
 
 		loan_security_assignment.append("allocated_loans", {
 			"loan": doc.name
 		})
 
 		loan_security_assignment.save()
+
 
 def override_name(doc, method=None):
 	doc.name = doc.get("loan_account_number")

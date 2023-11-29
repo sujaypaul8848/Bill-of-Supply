@@ -256,22 +256,21 @@ KINARA_CUSTOM_FIELDS = {
 			"insert_after": "kinara_collateral_type"
 		},
 		{
-			"fieldname": "kinara_collateral_ltv_amount",
-			"label": "Kinara LTV Amount",
-			"fieldtype": "Currency",
-			"options": "Company:company:default_currency",
-			"insert_after": "kinara_collateral_subtype"
-		},
-		{
 			"fieldname": "kinara_collateral_condition",
 			"label": "Kinara Collateral Condition",
 			"fieldtype": "Data",
-			"insert_after": "kinara_collateral_ltv_amount"
+			"insert_after": "kinara_collateral_subtype"
+		},
+		{
+			"fieldname": "kinara_collateral_value",
+			"label": "Kinara Collateral Value",
+			"fieldtype": "Currency",
+			"insert_after": "kinara_collateral_condition"
 		},
 		{
 			"fieldname": "column_break_dsfe",
 			"fieldtype": "Column Break",
-			"insert_after": "kinara_collateral_condition"
+			"insert_after": "kinara_collateral_value"
 		},
 		{
 			"fieldname": "kinara_description",
@@ -298,16 +297,10 @@ KINARA_CUSTOM_FIELDS = {
 			"insert_after": "kinara_model_number"
 		},
 		{
-			"fieldname": "kinara_entity_urn",
-			"label": "Kinara Entity URN",
-			"fieldtype": "Data",
-			"insert_after": "kinara_serial_number"
-		},
-		{
 			"fieldname": "kinara_cersai_charge_required",
 			"label": "Kinara CERSAI Charge Required",
 			"fieldtype": "Check",
-			"insert_after": "kinara_entity_urn"
+			"insert_after": "kinara_serial_number"
 		},
 	],
 }

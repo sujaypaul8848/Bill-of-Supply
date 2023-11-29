@@ -85,31 +85,59 @@ def create_collateral(args):
 		"loan_security_type": "Property",
 		"kinara_collateral_type": args.kinara_collateral_type,
 		"kinara_collateral_subtype": args.kinara_collateral_subtype,
-		"kinara_collateral_ltv_amount": args.kinara_collateral_ltv_amount,
+		"kinara_collateral_value": args.collateral_value,
 		"kinara_collateral_condition": args.kinara_collateral_condition,
 		"kinara_description": args.kinara_description,
 		"kinara_manufacturer_name": args.kinara_manufacturer_name,
 		"kinara_model_number": args.kinara_model_number,
 		"kinara_serial_number": args.kinara_serial_number,
-		"kinara_entity_urn": args.kinara_entity_urn,
 		"kinara_cersai_charge_required": args.kinara_cersai_charge_required
 	}).insert()
 
-	loan_security_assignment = frappe.new_doc("Loan Security Assignment")
-	loan_security_assignment.applicant_type = args.applicant_type
-	loan_security_assignment.applicant = args.applicant
-	loan_security_assignment.security_owner_type = args.collateral_owner_type
-	loan_security_assignment.security_owner = args.collateral_owner
+	return loan_security
 
-	loan_security_assignment.append("securities", {
-		"loan_security": loan_security.name,
-		"qty": 1,
-		"loan_security_price": args.collateral_value,
-	})
 
-	loan_security_assignment.insert()
+@frappe.whitelist()
+def get_collaterals_for_an_entity(args):
+	if isinstance(args, str):
+		args = json.loads(args)
 
-	return loan_security_assignment
+	args = frappe._dict(args)
+
+	res = []
+	
+	loan_security_assignments = frappe.db.get_all("Loan Security Assignment", {"applicant": args.applicant})
+
+	for lsa in loan_security_assignments:
+		sub_res = frappe._dict()
+
+		lsa_doc = frappe.get_doc("Loan Security Assignment", lsa.name)
+		collateral_id = lsa_doc.securities[0].loan_security
+		sub_res.update({"collateral_id": collateral_id, "status": lsa_doc.status, "available_value": lsa_doc.available_security_value})
+
+		collateral_fields = [
+			"kinara_collateral_type",
+			"kinara_collateral_subtype",
+			"kinara_collateral_value",
+			"kinara_collateral_condition",
+			"kinara_description",
+			"kinara_manufacturer_name",
+			"kinara_model_number",
+			"kinara_serial_number",
+			"kinara_cersai_charge_required"
+		]
+		collateral_doc = frappe.db.get_value("Loan Security", collateral_id, collateral_fields, as_dict=True)
+		sub_res.update(collateral_doc)
+
+		sub_res.update({"allocated_loans": []})
+		for loan in lsa_doc.allocated_loans:
+			sub_res.allocated_loans.append({
+				"loan": loan.loan,
+			})
+
+		res.append(sub_res)
+
+	return res
 
 
 @frappe.whitelist()
