@@ -262,15 +262,9 @@ KINARA_CUSTOM_FIELDS = {
 			"insert_after": "kinara_collateral_subtype"
 		},
 		{
-			"fieldname": "kinara_collateral_value",
-			"label": "Kinara Collateral Value",
-			"fieldtype": "Currency",
-			"insert_after": "kinara_collateral_condition"
-		},
-		{
 			"fieldname": "column_break_dsfe",
 			"fieldtype": "Column Break",
-			"insert_after": "kinara_collateral_value"
+			"insert_after": "kinara_collateral_condition"
 		},
 		{
 			"fieldname": "kinara_description",
