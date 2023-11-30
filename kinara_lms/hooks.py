@@ -283,7 +283,6 @@ fixtures = [
 				"Loan Security Deposit-custom_column_break_a4z3m",
 				"Loan Security Deposit-custom_available_balance",
 				"Loan Security Deposit-custom_refund_amount",
-				"Loan Security Deposit-custom_refund_date",
 				]
 		]
 	]},
