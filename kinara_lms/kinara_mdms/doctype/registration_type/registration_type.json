@@ -1,13 +1,13 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:type_id",
  "creation": "2023-10-16 10:39:15.495432",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "title",
   "type_id",
   "value",
   "category_type",
@@ -15,15 +15,10 @@
  ],
  "fields": [
   {
-   "fieldname": "title",
-   "fieldtype": "Data",
-   "hidden": 1,
-   "label": "Title"
-  },
-  {
    "fieldname": "type_id",
    "fieldtype": "Data",
-   "label": "Type ID"
+   "label": "Type ID",
+   "unique": 1
   },
   {
    "fieldname": "value",
@@ -45,10 +40,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-29 19:20:21.327128",
+ "modified": "2023-11-30 14:06:12.998673",
  "modified_by": "Administrator",
  "module": "Kinara MDMs",
  "name": "Registration Type",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

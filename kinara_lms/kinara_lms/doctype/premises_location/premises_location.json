@@ -1,44 +1,44 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:custom_type_id",
+ "autoname": "field:type_id",
  "creation": "2023-11-24 13:02:18.697827",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "custom_type_id",
-  "custom_value",
-  "custom_category_type",
+  "type_id",
+  "value",
+  "category_type",
   "check"
  ],
  "fields": [
-  {
-   "fieldname": "custom_type_id",
-   "fieldtype": "Data",
-   "label": "Type ID",
-   "unique": 1
-  },
-  {
-   "fieldname": "custom_value",
-   "fieldtype": "Data",
-   "label": "Value"
-  },
-  {
-   "fieldname": "custom_category_type",
-   "fieldtype": "Select",
-   "label": "Category Type",
-   "options": "\nIndividual\nBusiness\nAccount"
-  },
   {
    "default": "0",
    "fieldname": "check",
    "fieldtype": "Check",
    "label": "Disabled"
+  },
+  {
+   "fieldname": "type_id",
+   "fieldtype": "Data",
+   "label": "Type ID",
+   "unique": 1
+  },
+  {
+   "fieldname": "value",
+   "fieldtype": "Data",
+   "label": "Value"
+  },
+  {
+   "fieldname": "category_type",
+   "fieldtype": "Select",
+   "label": "Category Type",
+   "options": "\nIndividual\nBusiness\nAccount"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-29 14:01:42.225293",
+ "modified": "2023-11-30 12:57:44.239846",
  "modified_by": "Administrator",
  "module": "Kinara LMS",
  "name": "Premises Location",
