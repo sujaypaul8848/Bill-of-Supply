@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:collateral_sub_type_id",
+ "creation": "2023-11-29 16:31:36.564056",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "collateral_sub_type_id",
+  "collateral_sub_type",
+  "collateral_type_id",
+  "depreciation_rate",
+  "disabled"
+ ],
+ "fields": [
+  {
+   "fieldname": "collateral_type_id",
+   "fieldtype": "Data",
+   "label": "Collateral Type ID"
+  },
+  {
+   "fieldname": "collateral_sub_type_id",
+   "fieldtype": "Data",
+   "label": "Collateral Sub Type ID",
+   "unique": 1
+  },
+  {
+   "fieldname": "collateral_sub_type",
+   "fieldtype": "Data",
+   "label": "Collateral Sub Type"
+  },
+  {
+   "fieldname": "depreciation_rate",
+   "fieldtype": "Data",
+   "label": "Depreciation Rate"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-11-29 19:00:46.711558",
+ "modified_by": "Administrator",
+ "module": "Kinara LMS",
+ "name": "Loan Security Sub Type",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

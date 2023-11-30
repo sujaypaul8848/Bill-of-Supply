@@ -1,27 +1,57 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:type_id",
  "creation": "2023-10-16 10:56:31.658941",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "title"
+  "title",
+  "type_id",
+  "value",
+  "category_type",
+  "disabled"
  ],
  "fields": [
   {
    "fieldname": "title",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Title"
+  },
+  {
+   "fieldname": "type_id",
+   "fieldtype": "Data",
+   "label": "Type ID",
+   "unique": 1
+  },
+  {
+   "fieldname": "value",
+   "fieldtype": "Data",
+   "label": "Value"
+  },
+  {
+   "fieldname": "category_type",
+   "fieldtype": "Select",
+   "label": "Category Type",
+   "options": "\nIndividual\nBusiness\nAccount"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-16 10:56:31.658941",
+ "modified": "2023-11-29 19:29:47.736259",
  "modified_by": "Administrator",
  "module": "Kinara MDMs",
  "name": "Loan Purpose",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

@@ -1,27 +1,43 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:business_type_code",
  "creation": "2023-10-16 10:39:53.660441",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "title"
+  "business_type_code",
+  "business_type",
+  "disabled"
  ],
  "fields": [
   {
-   "fieldname": "title",
+   "fieldname": "business_type_code",
    "fieldtype": "Data",
-   "label": "Title"
+   "label": "Business Type Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "business_type",
+   "fieldtype": "Data",
+   "label": "Business Type"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-16 10:39:53.660441",
+ "modified": "2023-11-29 18:54:38.036874",
  "modified_by": "Administrator",
  "module": "Kinara MDMs",
  "name": "Business Type",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

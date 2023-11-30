@@ -10,7 +10,8 @@
  "field_order": [
   "custom_type_id",
   "custom_value",
-  "custom_category_type"
+  "custom_category_type",
+  "disabled"
  ],
  "fields": [
   {
@@ -29,11 +30,17 @@
    "fieldtype": "Select",
    "label": "Category Type",
    "options": "\nIndividual\nBusiness\nAccount"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-24 13:35:33.279375",
+ "modified": "2023-11-29 15:23:59.785527",
  "modified_by": "Administrator",
  "module": "Kinara LMS",
  "name": "Email Type",

@@ -7,18 +7,44 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "title"
+  "title",
+  "custom_type_id",
+  "custom_value",
+  "custom_category_type",
+  "disabled"
  ],
  "fields": [
   {
    "fieldname": "title",
    "fieldtype": "Data",
    "label": "Title"
+  },
+  {
+   "fieldname": "custom_type_id",
+   "fieldtype": "Data",
+   "label": "Type ID"
+  },
+  {
+   "fieldname": "custom_value",
+   "fieldtype": "Data",
+   "label": "Value"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
+  },
+  {
+   "fieldname": "custom_category_type",
+   "fieldtype": "Select",
+   "label": "Category Type",
+   "options": "\nIndividual\nBusiness\nAccount"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-16 10:48:49.080642",
+ "modified": "2023-11-29 15:32:41.963148",
  "modified_by": "Administrator",
  "module": "Kinara MDMs",
  "name": "Distance from Branch Office",
