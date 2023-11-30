@@ -277,12 +277,6 @@ fixtures = [
 				"Bank-custom_disabled",
 				"Loan Security Type-custom_collateral_type_id",
 				"Loan Security Type-custom_collateral_type",
-				"Loan Security Deposit-custom_deposite_date",
-				"Loan Security Deposit-custom_adjusted_amount"
-				"Loan Security Deposit-custom_adjusted_date",
-				"Loan Security Deposit-custom_column_break_a4z3m",
-				"Loan Security Deposit-custom_available_balance",
-				"Loan Security Deposit-custom_refund_amount",
 				]
 		]
 	]},
