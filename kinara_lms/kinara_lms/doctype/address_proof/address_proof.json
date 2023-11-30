@@ -8,7 +8,8 @@
  "field_order": [
   "custom_type_id",
   "custom_value",
-  "custom_category_type"
+  "custom_category_type",
+  "disabled"
  ],
  "fields": [
   {
@@ -27,11 +28,17 @@
    "fieldtype": "Select",
    "label": "Category Type  ",
    "options": "\nIndividual\nBusiness\nAccount"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-24 16:47:49.926225",
+ "modified": "2023-11-29 14:05:01.096981",
  "modified_by": "Administrator",
  "module": "Kinara LMS",
  "name": "Address Proof",

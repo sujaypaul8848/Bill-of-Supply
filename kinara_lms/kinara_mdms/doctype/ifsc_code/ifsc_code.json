@@ -1,27 +1,112 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:bank_id",
  "creation": "2023-10-16 10:51:56.718280",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "title"
+  "title",
+  "bank_id",
+  "bank_name",
+  "branch_name",
+  "district",
+  "ifsc_code",
+  "column_break_gx83",
+  "micr_code",
+  "branch_address",
+  "enach_falg",
+  "rtgs",
+  "neft",
+  "imps",
+  "disabled"
  ],
  "fields": [
   {
    "fieldname": "title",
    "fieldtype": "Data",
    "label": "Title"
+  },
+  {
+   "fieldname": "bank_id",
+   "fieldtype": "Data",
+   "label": "Bank ID",
+   "unique": 1
+  },
+  {
+   "fieldname": "bank_name",
+   "fieldtype": "Data",
+   "label": "Bank Name"
+  },
+  {
+   "fieldname": "branch_name",
+   "fieldtype": "Data",
+   "label": "Branch Name"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Data",
+   "label": "District"
+  },
+  {
+   "fieldname": "ifsc_code",
+   "fieldtype": "Data",
+   "label": "IFSC Code"
+  },
+  {
+   "fieldname": "column_break_gx83",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "micr_code",
+   "fieldtype": "Data",
+   "label": "MICR Code"
+  },
+  {
+   "fieldname": "branch_address",
+   "fieldtype": "Data",
+   "label": "Branch Address"
+  },
+  {
+   "default": "0",
+   "fieldname": "enach_falg",
+   "fieldtype": "Check",
+   "label": "ENACH Falg"
+  },
+  {
+   "default": "0",
+   "fieldname": "rtgs",
+   "fieldtype": "Check",
+   "label": "RTGS"
+  },
+  {
+   "default": "0",
+   "fieldname": "neft",
+   "fieldtype": "Check",
+   "label": "NEFT"
+  },
+  {
+   "default": "0",
+   "fieldname": "imps",
+   "fieldtype": "Check",
+   "label": "IMPS"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-16 10:51:56.718280",
+ "modified": "2023-11-29 18:56:51.413803",
  "modified_by": "Administrator",
  "module": "Kinara MDMs",
  "name": "IFSC Code",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
