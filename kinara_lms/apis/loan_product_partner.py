@@ -31,6 +31,5 @@ def get_prod_attr(partner):
                 LEFT JOIN `tabLoan Product Loan Partner` lplp
                 ON lp.name = lplp.parent
             WHERE lplp.loan_partner = %(partner)s
-            limit 1 
         """, values=values, as_dict=1)
         return data
