@@ -8,19 +8,12 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "title",
   "type_id",
   "value",
   "category_type",
   "disabled"
  ],
  "fields": [
-  {
-   "fieldname": "title",
-   "fieldtype": "Data",
-   "hidden": 1,
-   "label": "Title"
-  },
   {
    "fieldname": "type_id",
    "fieldtype": "Data",
@@ -47,7 +40,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-29 19:29:47.736259",
+ "modified": "2023-11-30 14:09:23.957190",
  "modified_by": "Administrator",
  "module": "Kinara MDMs",
  "name": "Loan Purpose",

@@ -255,8 +255,29 @@ fixtures = [
 				"Gender-custom_type_id",
 				"Gender-custom_value",
 				"Gender-custom_category_type",
-                "Gender-custom_disabled",
-			]
+				"Gender-custom_disabled",
+				"Branch-custom_hub_code",
+				"Branch-custom_zone_name",
+				"Branch-custom_region_name",
+				"Branch-custom_hub_name",
+				"Branch-custom_zone_code",
+				"Branch-custom_devision",
+				"Branch-custom_location_code",
+				"Branch-custom_hub_address_line_2",
+				"Branch-custom_hub_address_line_3",
+				"Branch-custom_state_code",
+				"Branch-custom_hub_address_line_1",
+				"Branch-custom_devision_code",
+				"Branch-custom_hub_id",
+				"Branch-custom_region_code",
+				"Branch-custom_state",
+				"Branch-custom_disabled",
+				"Branch-custom_column_break_gzacv",
+				"Bank-custom_bank_id",
+				"Bank-custom_disabled",
+				"Loan Security Type-custom_collateral_type_id",
+				"Loan Security Type-custom_collateral_type",
+				]
 		]
 	]},
 	{"dt": "Property Setter", "filters": [
@@ -276,6 +297,15 @@ fixtures = [
 				"Gender-main-naming_rule",
 				"Gender-main-autoname",
 				"Gender-main-field_order",
+				"Branch-main-naming_rule",
+				"Branch-main-autoname",
+				"Branch-main-field_order",
+				"Bank-main-naming_rule",
+				"Bank-main-autoname",
+				"Bank-main-field_order",
+				"Loan Security Type-main-field_order",
+				"Loan Security Type-main-autoname",
+				"Loan Security Type-main-naming_rule",
 			]
 		]
 	]}

@@ -1,44 +1,44 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:custom_type_id",
+ "autoname": "field:type_id",
  "creation": "2023-11-24 12:48:21.180211",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "custom_type_id",
-  "custom_value",
-  "custom_category_type",
+  "type_id",
+  "value",
+  "type",
   "disabled"
  ],
  "fields": [
-  {
-   "fieldname": "custom_type_id",
-   "fieldtype": "Data",
-   "label": "Type ID",
-   "unique": 1
-  },
-  {
-   "fieldname": "custom_value",
-   "fieldtype": "Data",
-   "label": "Value"
-  },
-  {
-   "fieldname": "custom_category_type",
-   "fieldtype": "Select",
-   "label": "Category Type",
-   "options": "\nIndividual\nBusiness\nAccount"
-  },
   {
    "default": "0",
    "fieldname": "disabled",
    "fieldtype": "Check",
    "label": "Disabled"
+  },
+  {
+   "fieldname": "type_id",
+   "fieldtype": "Data",
+   "label": "Type ID",
+   "unique": 1
+  },
+  {
+   "fieldname": "value",
+   "fieldtype": "Data",
+   "label": "Value"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Category Type",
+   "options": "\nIndividual\nBusiness\nAccount"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-29 14:09:18.093444",
+ "modified": "2023-11-30 13:13:26.800745",
  "modified_by": "Administrator",
  "module": "Kinara LMS",
  "name": "Obligation",
