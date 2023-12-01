@@ -85,7 +85,7 @@ def create_collateral(args):
 		"loan_security_type": "Property",
 		"kinara_collateral_type": args.kinara_collateral_type,
 		"kinara_collateral_subtype": args.kinara_collateral_subtype,
-		"kinara_collateral_value": args.collateral_value,
+		"original_security_value": args.collateral_value,
 		"kinara_collateral_condition": args.kinara_collateral_condition,
 		"kinara_description": args.kinara_description,
 		"kinara_manufacturer_name": args.kinara_manufacturer_name,
@@ -113,12 +113,14 @@ def get_collaterals_for_an_entity(args):
 
 		lsa_doc = frappe.get_doc("Loan Security Assignment", lsa.name)
 		collateral_id = lsa_doc.securities[0].loan_security
-		sub_res.update({"collateral_id": collateral_id, "status": lsa_doc.status, "available_value": lsa_doc.available_security_value})
+		sub_res.update({"collateral_id": collateral_id, "status": lsa_doc.status})
 
 		collateral_fields = [
 			"kinara_collateral_type",
 			"kinara_collateral_subtype",
-			"kinara_collateral_value",
+			"original_security_value",
+			"utilized_security_value",
+			"available_security_value",
 			"kinara_collateral_condition",
 			"kinara_description",
 			"kinara_manufacturer_name",

@@ -57,7 +57,7 @@ def created_loan_related_docs(doc, method=None):
 			loan_security_assignment.append("securities", {
 				"loan_security": d.get("collateral_id"),
 				"qty": 1,
-				"loan_security_price": frappe.db.get_value("Loan Security", d.get("collateral_id"), "kinara_collateral_value"),
+				"loan_security_price": frappe.db.get_value("Loan Security", d.get("collateral_id"), "original_security_value"),
 			})
 
 			loan_security_assignment.insert()

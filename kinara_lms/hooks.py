@@ -328,7 +328,8 @@ fixtures = [
 				"Loan Security Type-main-autoname",
 				"Loan Security Type-main-naming_rule",
 				"Loan Product-main-field_order",
-				"Loan Product-loan_category-reqd"
+				"Loan Product-loan_category-reqd",
+				"Loan Security Deposit-main-field_order"
 			]
 		]
 	]}
