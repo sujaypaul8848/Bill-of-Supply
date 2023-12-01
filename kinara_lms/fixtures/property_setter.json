@@ -1,6 +1,22 @@
 [
  {
   "default_value": null,
+  "doc_type": "Loan Product",
+  "docstatus": 0,
+  "doctype": "Property Setter",
+  "doctype_or_field": "DocField",
+  "field_name": "loan_category",
+  "is_system_generated": 0,
+  "modified": "2023-11-30 19:55:14.606880",
+  "module": null,
+  "name": "Loan Product-loan_category-reqd",
+  "property": "reqd",
+  "property_type": "Check",
+  "row_name": null,
+  "value": "1"
+ },
+ {
+  "default_value": null,
   "doc_type": "Loan Security Type",
   "docstatus": 0,
   "doctype": "Property Setter",
@@ -366,5 +382,21 @@
   "property_type": "Data",
   "row_name": null,
   "value": "field:collateral_type_id"
+ },
+ {
+  "default_value": null,
+  "doc_type": "Loan Product",
+  "docstatus": 0,
+  "doctype": "Property Setter",
+  "doctype_or_field": "DocType",
+  "field_name": null,
+  "is_system_generated": 0,
+  "modified": "2023-12-01 14:49:26.767097",
+  "module": null,
+  "name": "Loan Product-main-field_order",
+  "property": "field_order",
+  "property_type": "Data",
+  "row_name": null,
+  "value": "[\"product_code\", \"product_name\", \"loan_category\", \"custom_minimum_loan_amount\", \"maximum_loan_amount\", \"custom_default_loan_amount\", \"rate_of_interest\", \"penalty_interest_method\", \"penalty_interest_rate\", \"penalty_interest_value_ptpd\", \"grace_period_in_days\", \"write_off_amount\", \"min_days_bw_disbursement_first_repayment\", \"broken_period_interest_charged\", \"auto_close_with_security_deposit\", \"min_auto_closure_tolerance_amount\", \"max_auto_closure_tolerance_amount\", \"custom_repayment_method\", \"custom_repayment_demand_frequency\", \"custom_day_count_convention\", \"custom_advance_payment_allowed\", \"custom_partial_payment_allowed\", \"custom_part_prepayment_allowed\", \"custom_foreclosure_allowed\", \"loan_partners\", \"column_break_2\", \"company\", \"is_term_loan\", \"disabled\", \"repayment_schedule_type\", \"cyclic_day_of_the_month\", \"repayment_date_on\", \"days_past_due_threshold_for_npa\", \"custom_minimum_tenure\", \"custom_maximum_tenure\", \"custom_default_tenure\", \"custom_roi_type\", \"custom_minimum_spread_rate\", \"custom_maximum_spread_rate\", \"custom_base_rate\", \"custom_minimum_days_for_1st_repayment_date\", \"custom_maximum_days_for_1st_repayment_date\", \"description\", \"custom_is_moratorium_allowed\", \"moratorium_types_allowed\", \"custom_moratorium_on_1st_disbursement\", \"custom_moratorum_duration\", \"custom_mutitranche_allowed\", \"custom_sub_standard_definition_for_collection_offset_logic\", \"custom_dpd_threshold_for_sub_standard_definition\", \"custom_standard_knockoff_sequence\", \"custom_npa_knockoff_sequence\", \"custom_write_off__knockoff_sequence\", \"account_details_section\", \"mode_of_payment\", \"disbursement_account\", \"payment_account\", \"column_break_12\", \"loan_account\", \"security_deposit_account\", \"suspense_collection_account\", \"interest_accounts_section\", \"interest_income_account\", \"interest_accrued_account\", \"interest_waiver_account\", \"broken_period_interest_recovery_account\", \"column_break_nuqr\", \"interest_receivable_account\", \"suspense_interest_income\", \"suspense_interest_receivable\", \"additional_interest_accounts_section\", \"same_as_regular_interest_accounts\", \"additional_interest_income\", \"additional_interest_accrued\", \"column_break_tszr\", \"additional_interest_receivable\", \"additional_interest_suspense\", \"additional_interest_waiver\", \"penalty_charges_accounts_section\", \"penalty_income_account\", \"penalty_accrued_account\", \"penalty_waiver_account\", \"column_break_zslc\", \"penalty_receivable_account\", \"penalty_suspense_account\", \"write_off_accounts_section\", \"write_off_account\", \"column_break_ehnt\", \"write_off_recovery_account\", \"section_break_ia6s\", \"loan_charges\", \"amended_from\"]"
  }
 ]

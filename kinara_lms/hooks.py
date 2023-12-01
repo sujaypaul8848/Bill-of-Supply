@@ -277,6 +277,27 @@ fixtures = [
 				"Bank-custom_disabled",
 				"Loan Security Type-custom_collateral_type_id",
 				"Loan Security Type-custom_collateral_type",
+				"Loan Product-custom_moratorium_types_allowed",
+				"Loan Product-custom_base_rate",
+				"Loan Product-custom_write_off__knockoff_sequence",
+				"Loan Product-custom_npa_knockoff_sequence",
+				"Loan Product-custom_standard_knockoff_sequence",
+				"Loan Product-custom_dpd_threshold_for_sub_standard_definition",
+				"Loan Product-custom_sub_standard_definition_for_collection_offset_logic",
+				"Loan Product-custom_mutitranche_allowed",
+				"Loan Product-custom_maximum_days_for_1st_repayment_date",
+				"Loan Product-custom_minimum_days_for_1st_repayment_date",
+				"Loan Product-custom_foreclosure_allowed",
+				"Loan Product-custom_part_prepayment_allowed",
+				"Loan Product-custom_partial_payment_allowed",
+				"Loan Product-custom_advance_payment_allowed",
+				"Loan Product-custom_day_count_convention",
+				"Loan Product-custom_repayment_demand_frequency",
+				"Loan Product-custom_repayment_method",
+				"Loan Product-custom_default_tenure",
+				"Loan Product-custom_maximum_tenure",
+				"Loan Product-custom_minimum_tenure",
+				"Loan Product-custom_roi_type"
 				]
 		]
 	]},
@@ -306,6 +327,8 @@ fixtures = [
 				"Loan Security Type-main-field_order",
 				"Loan Security Type-main-autoname",
 				"Loan Security Type-main-naming_rule",
+				"Loan Product-main-field_order",
+				"Loan Product-loan_category-reqd"
 			]
 		]
 	]}
