@@ -240,6 +240,7 @@ fixtures = [
 				"Loan-custom_guarantors",
 				"Loan-custom_co_applicants",
 				"Loan-custom_channel_partner",
+				"Loan-custom_colending_partner",
 				"Sales Invoice-custom_loan_details",
 				"Sales Invoice-custom_applicant_name",
 				"Sales Invoice-custom_applicant_mobile_no",
@@ -324,7 +325,9 @@ fixtures = [
 				"Loan Security Type-main-naming_rule",
 				"Loan Security Deposit-main-field_order",
 				"Loan Adjustment-is_foreclosure-hidden",
-				"Loan Partner-main-field_order"
+				"Loan Partner-main-field_order",
+				"Loan-main-field_order",
+				"Loan-loan_partner-hidden",
 			]
 		]
 	]}
