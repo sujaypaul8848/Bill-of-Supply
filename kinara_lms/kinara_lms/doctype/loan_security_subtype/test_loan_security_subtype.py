@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestLoanSecuritySubType(FrappeTestCase):
+class TestLoanSecuritySubtype(FrappeTestCase):
 	pass

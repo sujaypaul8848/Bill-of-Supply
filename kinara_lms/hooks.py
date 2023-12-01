@@ -277,6 +277,7 @@ fixtures = [
 				"Bank-custom_disabled",
 				"Loan Security Type-custom_collateral_type_id",
 				"Loan Security Type-custom_collateral_type",
+                "Loan Adjustment-custom_foreclosure_charges",
 				]
 		]
 	]},
@@ -307,6 +308,7 @@ fixtures = [
 				"Loan Security Type-main-autoname",
 				"Loan Security Type-main-naming_rule",
 				"Loan Security Deposit-main-field_order",
+                "Loan Adjustment-is_foreclosure-hidden",
 			]
 		]
 	]}
