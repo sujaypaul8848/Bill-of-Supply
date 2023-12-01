@@ -240,6 +240,7 @@ fixtures = [
 				"Loan-custom_guarantors",
 				"Loan-custom_co_applicants",
 				"Loan-custom_channel_partner",
+				"Loan-custom_colending_partner",
 				"Sales Invoice-custom_loan_details",
 				"Sales Invoice-custom_applicant_name",
 				"Sales Invoice-custom_applicant_mobile_no",
@@ -297,7 +298,23 @@ fixtures = [
 				"Loan Product-custom_default_tenure",
 				"Loan Product-custom_maximum_tenure",
 				"Loan Product-custom_minimum_tenure",
-				"Loan Product-custom_roi_type"
+				"Loan Product-custom_roi_type",
+				"Loan Adjustment-custom_foreclosure_charges",
+				"Loan Partner-custom_disbursement_details",
+				"Loan Partner-custom_partner_cin",
+				"Loan Partner-custom_partner_rbi",
+				"Loan Partner-custom_partner_full_name",
+				"Loan Partner-custom_ifsc_code_collections",
+				"Loan Partner-custom_escrow_applicable_flag_collections",
+				"Loan Partner-custom_bank_name_disbursement",
+				"Loan Partner-custom_ifsc_code_disbursement",
+				"Loan Partner-custom_escrow_applicable_flag_disbursement",
+				"Loan Partner-custom_collections_details",
+				"Loan Partner-custom_bank_account_number_disbursement",
+				"Loan Partner-custom_column_break_xsx3x",
+				"Loan Partner-custom_column_break_xt3gw",
+				"Loan Partner-custom_bank_name_collections",
+				"Loan Partner-custom_bank_account_number_collections",
 				]
 		]
 	]},
@@ -331,7 +348,11 @@ fixtures = [
 				"Loan Product-loan_category-reqd",
 				"Loan Security Deposit-main-field_order",
 				"Loan Product-grace_period_in_days-reqd",
-				"Loan Product-penalty_interest_method-reqd"
+				"Loan Product-penalty_interest_method-reqd",
+				"Loan Adjustment-is_foreclosure-hidden",
+				"Loan Partner-main-field_order",
+				"Loan-main-field_order",
+				"Loan-loan_partner-hidden",
 			]
 		]
 	]}

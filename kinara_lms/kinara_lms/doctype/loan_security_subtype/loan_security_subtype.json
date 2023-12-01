@@ -33,7 +33,7 @@
   },
   {
    "fieldname": "depreciation_rate",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Depreciation Rate"
   },
   {
@@ -45,10 +45,10 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-29 19:00:46.711558",
+ "modified": "2023-12-01 10:30:07.040639",
  "modified_by": "Administrator",
  "module": "Kinara LMS",
- "name": "Loan Security Sub Type",
+ "name": "Loan Security Subtype",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
