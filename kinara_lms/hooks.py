@@ -276,8 +276,7 @@ fixtures = [
 				"Branch-custom_column_break_gzacv",
 				"Bank-custom_bank_id",
 				"Bank-custom_disabled",
-				"Loan Security Type-custom_collateral_type_id",
-				"Loan Security Type-custom_collateral_type",
+				"Loan Security Type-custom_type_id",
 				"Loan Adjustment-custom_foreclosure_charges",
 				"Loan Partner-custom_disbursement_details",
 				"Loan Partner-custom_partner_cin",
@@ -294,6 +293,7 @@ fixtures = [
 				"Loan Partner-custom_column_break_xt3gw",
 				"Loan Partner-custom_bank_name_collections",
 				"Loan Partner-custom_bank_account_number_collections",
+				"Company-custom_default_disbursement_account",
 				]
 		]
 	]},
