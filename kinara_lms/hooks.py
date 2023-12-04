@@ -299,6 +299,7 @@ fixtures = [
 				"Loan Product-custom_maximum_tenure",
 				"Loan Product-custom_minimum_tenure",
 				"Loan Product-custom_roi_type",
+				"Loan Security Type-custom_type_id",
 				"Loan Adjustment-custom_foreclosure_charges",
 				"Loan Partner-custom_disbursement_details",
 				"Loan Partner-custom_partner_cin",
@@ -315,6 +316,7 @@ fixtures = [
 				"Loan Partner-custom_column_break_xt3gw",
 				"Loan Partner-custom_bank_name_collections",
 				"Loan Partner-custom_bank_account_number_collections",
+				"Company-custom_default_disbursement_account",
 				]
 		]
 	]},

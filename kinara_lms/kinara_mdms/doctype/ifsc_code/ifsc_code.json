@@ -1,19 +1,18 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:bank_id",
+ "autoname": "field:ifsc_code",
  "creation": "2023-10-16 10:51:56.718280",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "title",
+  "ifsc_code",
   "bank_id",
   "bank_name",
   "branch_name",
   "district",
-  "ifsc_code",
   "column_break_gx83",
   "micr_code",
   "branch_address",
@@ -25,15 +24,10 @@
  ],
  "fields": [
   {
-   "fieldname": "title",
-   "fieldtype": "Data",
-   "label": "Title"
-  },
-  {
    "fieldname": "bank_id",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "Bank ID",
-   "unique": 1
+   "options": "Bank"
   },
   {
    "fieldname": "bank_name",
@@ -53,7 +47,8 @@
   {
    "fieldname": "ifsc_code",
    "fieldtype": "Data",
-   "label": "IFSC Code"
+   "label": "IFSC Code",
+   "unique": 1
   },
   {
    "fieldname": "column_break_gx83",
@@ -102,7 +97,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-29 18:56:51.413803",
+ "modified": "2023-12-04 12:03:56.202146",
  "modified_by": "Administrator",
  "module": "Kinara MDMs",
  "name": "IFSC Code",

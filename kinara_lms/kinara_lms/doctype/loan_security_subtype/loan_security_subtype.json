@@ -1,36 +1,20 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:collateral_sub_type_id",
+ "autoname": "field:type_id",
  "creation": "2023-11-29 16:31:36.564056",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "collateral_sub_type_id",
-  "collateral_sub_type",
-  "collateral_type_id",
+  "type_id",
+  "value",
+  "loan_security_type_id",
   "depreciation_rate",
   "disabled"
  ],
  "fields": [
-  {
-   "fieldname": "collateral_type_id",
-   "fieldtype": "Data",
-   "label": "Collateral Type ID"
-  },
-  {
-   "fieldname": "collateral_sub_type_id",
-   "fieldtype": "Data",
-   "label": "Collateral Sub Type ID",
-   "unique": 1
-  },
-  {
-   "fieldname": "collateral_sub_type",
-   "fieldtype": "Data",
-   "label": "Collateral Sub Type"
-  },
   {
    "fieldname": "depreciation_rate",
    "fieldtype": "Float",
@@ -41,11 +25,28 @@
    "fieldname": "disabled",
    "fieldtype": "Check",
    "label": "Disabled"
+  },
+  {
+   "fieldname": "type_id",
+   "fieldtype": "Data",
+   "label": "Type ID",
+   "unique": 1
+  },
+  {
+   "fieldname": "value",
+   "fieldtype": "Data",
+   "label": "Value"
+  },
+  {
+   "fieldname": "loan_security_type_id",
+   "fieldtype": "Link",
+   "label": "Loan Security Type ID",
+   "options": "Loan Security Type"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-01 10:30:07.040639",
+ "modified": "2023-12-04 11:34:09.266930",
  "modified_by": "Administrator",
  "module": "Kinara LMS",
  "name": "Loan Security Subtype",
