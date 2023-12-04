@@ -1,9 +1,9 @@
 import frappe
 
 @frappe.whitelist()
-def get_prod_attr(partner):
-    if partner != None:
-        values = {'partner': partner}
+def get_prod_attr(product):
+    if product != None:
+        values = {'product': product}
         data = frappe.db.sql("""
             SELECT
                 GROUP_CONCAT(DISTINCT lplp.loan_partner) AS loan_partners,
@@ -16,7 +16,7 @@ def get_prod_attr(partner):
                 JOIN `tabLoan Charges` lc
                 ON lp.name = lc.parent
                 
-            WHERE lp.name = %(partner)s
+            WHERE lp.name = %(product)s
             
         """, values=values, as_dict=1)
         return data
