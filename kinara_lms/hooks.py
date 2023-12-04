@@ -300,7 +300,7 @@ fixtures = [
 				"Loan Product-custom_minimum_tenure",
 				"Loan Product-custom_roi_type",
 				"Loan Product-custom_minimum_loan_amount",
-				"custom_default_loan_amount",
+				"Loan Product-custom_default_loan_amount",
 				"Loan Product-custom_minimum_spread_rate",
 				"Loan Product-custom_maximum_spread_rate",
 				"Loan Security Type-custom_type_id",
