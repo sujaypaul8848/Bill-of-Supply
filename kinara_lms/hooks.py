@@ -31,6 +31,7 @@ app_license = "MIT"
 doctype_js = {
 	"Loan Partner": "public/js/lending/loan_partner.js",
 	"Loan": "public/js/lending/loan.js",
+	"Company":  "public/js/erpnext/company.js",
 }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
@@ -141,6 +142,9 @@ doc_events = {
 	"Sales Invoice": {
 		"before_save": "kinara_lms.overrides.sales_invoice.before_save",
 	},
+	"Company":{
+		"validate": "kinara_lms.overrides.company.validate_default_disbursement_account",
+	}
 }
 
 # Scheduled Tasks

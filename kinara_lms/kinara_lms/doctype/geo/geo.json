@@ -1,34 +1,30 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:name1",
+ "autoname": "field:type_id",
  "creation": "2023-11-29 16:24:34.356365",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "name1",
+  "type_id",
   "country",
   "state",
   "district",
   "city",
   "locality",
-  "column_break_hip8",
   "pin_code",
+  "column_break_hip8",
   "country_code",
   "state_code",
   "district_code",
   "vtc_code",
+  "zone_name",
+  "kc_serv_flag",
   "disabled"
  ],
  "fields": [
-  {
-   "fieldname": "name1",
-   "fieldtype": "Data",
-   "label": "Name",
-   "unique": 1
-  },
   {
    "fieldname": "country",
    "fieldtype": "Data",
@@ -88,11 +84,28 @@
    "fieldname": "disabled",
    "fieldtype": "Check",
    "label": "Disabled"
+  },
+  {
+   "fieldname": "type_id",
+   "fieldtype": "Data",
+   "label": "Type ID",
+   "unique": 1
+  },
+  {
+   "fieldname": "zone_name",
+   "fieldtype": "Data",
+   "label": "Zone Name"
+  },
+  {
+   "default": "0",
+   "fieldname": "kc_serv_flag",
+   "fieldtype": "Check",
+   "label": "KC Serv Flag"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-29 18:56:02.451072",
+ "modified": "2023-12-04 16:08:35.402525",
  "modified_by": "Administrator",
  "module": "Kinara LMS",
  "name": "GEO",
