@@ -326,7 +326,8 @@ fixtures = [
 				"Loan Partner-custom_bank_name_collections",
 				"Loan Partner-custom_bank_account_number_collections",
 				"Company-custom_default_disbursement_account",
-				]
+				"Address-custom_geo_type_id",
+			]
 		]
 	]},
 	{"dt": "Property Setter", "filters": [
