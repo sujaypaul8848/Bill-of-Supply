@@ -356,22 +356,6 @@
   "doc_type": "Loan",
   "docstatus": 0,
   "doctype": "Property Setter",
-  "doctype_or_field": "DocType",
-  "field_name": null,
-  "is_system_generated": 0,
-  "modified": "2023-12-01 17:41:11.149104",
-  "module": null,
-  "name": "Loan-main-field_order",
-  "property": "field_order",
-  "property_type": "Data",
-  "row_name": null,
-  "value": "[\"applicant_type\", \"applicant\", \"custom_individual_applicant\", \"loan_id\", \"loan_account_number\", \"loan_application_id\", \"applicant_name\", \"loan_application\", \"branch\", \"posting_date\", \"status\", \"column_break_3\", \"custom_co_applicants\", \"custom_guarantors\", \"company\", \"loan_partner\", null, \"custom_channel_partner\", \"section_break_8\", \"loan_product\", \"repayment_schedule_type\", \"loan_amount\", \"rate_of_interest\", \"is_secured_loan\", \"disbursement_date\", \"closure_date\", \"disbursed_amount\", \"column_break_11\", \"maximum_loan_amount\", \"repayment_method\", \"repayment_periods\", \"monthly_repayment_amount\", \"repayment_start_date\", \"repayment_frequency\", \"moratorium_tenure\", \"treatment_of_interest\", \"is_term_loan\", \"kinara_lms_details\", \"hub\", \"loan_officer\", \"her_vikas\", \"channel\", \"lap_combo\", \"green_finance_flag\", \"effective_interest_rate\", \"direct_assignment_tagging\", \"kinara_column_break\", \"loan_purpose\", \"loan_sub_purpose\", \"loan_credit_limits_section\", \"limit_applicable_start\", \"minimum_limit_amount\", \"column_break_foeo\", \"limit_applicable_end\", \"maximum_limit_amount\", \"loan_classification_details_section\", \"days_past_due\", \"classification_code\", \"classification_name\", \"column_break_zpe2\", \"loan_restructure_count\", \"watch_period_end_date\", \"tenure_post_restructure\", \"accounting_dimensions_section\", \"cost_center\", \"loan_charges_section\", \"loan_charges\", \"account_info\", \"mode_of_payment\", \"disbursement_account\", \"payment_account\", \"column_break_9\", \"loan_account\", \"interest_income_account\", \"penalty_income_account\", \"section_break_17\", \"total_payment\", \"total_principal_paid\", \"written_off_amount\", \"refund_amount\", \"debit_adjustment_amount\", \"credit_adjustment_amount\", \"column_break_19\", \"total_interest_payable\", \"total_amount_paid\", \"is_npa\", \"manual_npa\", \"amended_from\"]"
- },
- {
-  "default_value": null,
-  "doc_type": "Loan",
-  "docstatus": 0,
-  "doctype": "Property Setter",
   "doctype_or_field": "DocField",
   "field_name": "loan_partner",
   "is_system_generated": 0,
@@ -430,5 +414,21 @@
   "property_type": "Data",
   "row_name": null,
   "value": "[\"branch\", \"hub_code\", \"hub_name\", \"zone_name\", \"zone_code\", null, null, \"hub_id\", \"disabled\", \"custom_column_break_gzacv\", \"region_name\", \"region_code\", \"state\", \"state_code\", \"hub_address_line_1\", \"hub_address_line_2\", \"hub_address_line_3\", \"location_code\"]"
+ },
+ {
+  "default_value": null,
+  "doc_type": "Loan",
+  "docstatus": 0,
+  "doctype": "Property Setter",
+  "doctype_or_field": "DocType",
+  "field_name": null,
+  "is_system_generated": 0,
+  "modified": "2023-12-05 13:05:11.626161",
+  "module": null,
+  "name": "Loan-main-field_order",
+  "property": "field_order",
+  "property_type": "Data",
+  "row_name": null,
+  "value": "[\"applicant_type\", \"applicant\", \"custom_individual_applicant\", \"loan_id\", \"loan_account_number\", \"loan_application_id\", \"applicant_name\", \"loan_application\", \"branch\", \"posting_date\", \"status\", \"column_break_3\", \"custom_co_applicants\", \"custom_guarantors\", null, \"company\", \"loan_partner\", \"co_lending_partner\", \"custom_channel_partner\", \"section_break_8\", \"loan_product\", \"repayment_schedule_type\", \"loan_amount\", \"rate_of_interest\", \"is_secured_loan\", \"disbursement_date\", \"closure_date\", \"disbursed_amount\", \"column_break_11\", \"maximum_loan_amount\", \"repayment_method\", \"repayment_periods\", \"monthly_repayment_amount\", \"repayment_start_date\", \"repayment_frequency\", \"moratorium_tenure\", \"treatment_of_interest\", \"is_term_loan\", \"kinara_lms_details\", \"hub\", \"loan_officer\", \"her_vikas\", \"channel\", \"lap_combo\", \"green_finance_flag\", \"effective_interest_rate\", \"direct_assignment_tagging\", \"kinara_column_break\", \"loan_purpose\", \"loan_sub_purpose\", \"loan_credit_limits_section\", \"limit_applicable_start\", \"minimum_limit_amount\", \"column_break_foeo\", \"limit_applicable_end\", \"maximum_limit_amount\", \"loan_classification_details_section\", \"days_past_due\", \"classification_code\", \"classification_name\", \"column_break_zpe2\", \"loan_restructure_count\", \"watch_period_end_date\", \"tenure_post_restructure\", \"accounting_dimensions_section\", \"cost_center\", \"loan_charges_section\", \"loan_charges\", \"account_info\", \"mode_of_payment\", \"disbursement_account\", \"payment_account\", \"column_break_9\", \"loan_account\", \"interest_income_account\", \"penalty_income_account\", \"section_break_17\", \"total_payment\", \"total_principal_paid\", \"written_off_amount\", \"refund_amount\", \"debit_adjustment_amount\", \"credit_adjustment_amount\", \"column_break_19\", \"total_interest_payable\", \"total_amount_paid\", \"is_npa\", \"manual_npa\", \"amended_from\"]"
  }
 ]

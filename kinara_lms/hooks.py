@@ -245,6 +245,7 @@ fixtures = [
 				"Loan-custom_co_applicants",
 				"Loan-custom_channel_partner",
 				"Loan-custom_colending_partner",
+				"Loan-custom_buyer"
 				"Sales Invoice-custom_loan_details",
 				"Sales Invoice-custom_applicant_name",
 				"Sales Invoice-custom_applicant_mobile_no",
