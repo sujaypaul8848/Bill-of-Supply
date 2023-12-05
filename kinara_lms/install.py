@@ -297,6 +297,24 @@ KINARA_CUSTOM_FIELDS = {
 			"insert_after": "kinara_serial_number"
 		},
 	],
+	"Loan Security Assignment": [
+		{
+			"fieldname": "security_owner_type",
+			"fieldtype": "Select",
+			"label": "Security Owner Type",
+			"options": "Employee\nMember\nCustomer\nCompany",
+			"reqd": 1,
+			"insert_after": "applicant"
+		},
+		{
+			"fieldname": "security_owner",
+			"fieldtype": "Dynamic Link",
+			"label": "Security Owner",
+			"options": "security_owner_type",
+			"reqd": 1,
+			"insert_after": "security_owner_type"
+		},
+	],
 }
 
 
