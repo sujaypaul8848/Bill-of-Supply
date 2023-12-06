@@ -10,7 +10,6 @@ function defaultDisbursementAccountFilter(frm){
         return {
             filters: [
                 ["company", "=", frm.doc.company_name],
-                ["account_type", "in", ["Disbursement","Disbursement & Collections"]]
             ]
         };
     });

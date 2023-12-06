@@ -141,7 +141,7 @@ doc_events = {
 	},
 	"Sales Invoice": {
 		"before_save": "kinara_lms.overrides.sales_invoice.before_save",
-        "before_validate": "kinara_lms.overrides.sales_invoice.set_company_billing_address",
+        "before_validate": "kinara_lms.overrides.sales_invoice.before_validate",
 	},
 	"Company":{
 		"validate": "kinara_lms.overrides.company.validate_default_disbursement_account",
@@ -251,6 +251,9 @@ fixtures = [
 				"Sales Invoice-custom_applicant_name",
 				"Sales Invoice-custom_applicant_mobile_no",
 				"Sales Invoice-custom_column_break_fkvbq",
+				"Sales Invoice-custom_loan_partner"
+				"Sales Invoice-custom_loan_partner_address"
+				"Sales Invoice-custom_loan_partner_gstin"
 				"Bank Account Type-custom_type_id",
 				"Bank Account Type-custom_value",
 				"Bank Account Type-custom_category_type",
@@ -311,6 +314,8 @@ fixtures = [
 				"Loan Product-custom_maximum_spread_rate",
 				"Loan Security Type-custom_type_id",
 				"Loan Adjustment-custom_foreclosure_charges",
+				"Loan Adjustment-custom_mode_of_payment",
+				"Loan Adjustment-custom_payment_gateway",
 				"Loan Partner-custom_disbursement_details",
 				"Loan Partner-custom_partner_cin",
 				"Loan Partner-custom_partner_rbi",
@@ -328,6 +333,7 @@ fixtures = [
 				"Loan Partner-custom_bank_account_number_collections",
 				"Company-custom_default_disbursement_account",
 				"Address-custom_geo_type_id",
+				"Company-custom_gst_regime",
 			]
 		]
 	]},
@@ -366,6 +372,10 @@ fixtures = [
 				"Loan Partner-main-field_order",
 				"Loan-main-field_order",
 				"Loan-loan_partner-hidden",
+				"Address-main-field_order",
+				"Sales Invoice-main-field_order",
+				"Company-main-field_order",
+				"Loan Adjustment-main-field_order",
 			]
 		]
 	]}
