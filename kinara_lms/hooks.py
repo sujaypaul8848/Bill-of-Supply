@@ -292,7 +292,7 @@ fixtures = [
 				"Loan Product-custom_dpd_threshold_for_sub_standard_definition",
 				"Loan Product-custom_sub_standard_definition_for_collection_offset_logic",
 				"Loan Product-custom_mutitranche_allowed",
-				"Loan Product-custom_maximum_days_for_1st_repayment_date",
+				"Loan Product-custom_interest_treatment_after_moratorium_period",
 				"Loan Product-custom_minimum_days_for_1st_repayment_date",
 				"Loan Product-custom_foreclosure_allowed",
 				"Loan Product-custom_part_prepayment_allowed",
