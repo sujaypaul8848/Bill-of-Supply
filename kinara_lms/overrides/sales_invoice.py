@@ -21,7 +21,6 @@ def set_company_billing_address(doc,method=None):
     if not result:
         filter = f"ads.is_primary_address = 1"
         result = execute_query(doc.company, filter)
-    print(result)
     doc.company_address = result[0]['name']
     doc.company_gstin = result[0]['gstin']
 
