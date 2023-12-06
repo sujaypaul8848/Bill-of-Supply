@@ -141,6 +141,7 @@ doc_events = {
 	},
 	"Sales Invoice": {
 		"before_save": "kinara_lms.overrides.sales_invoice.before_save",
+        "before_validate": "kinara_lms.overrides.sales_invoice.set_company_billing_address",
 	},
 	"Company":{
 		"validate": "kinara_lms.overrides.company.validate_default_disbursement_account",
