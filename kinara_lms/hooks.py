@@ -141,6 +141,7 @@ doc_events = {
 	},
 	"Sales Invoice": {
 		"before_save": "kinara_lms.overrides.sales_invoice.before_save",
+        "before_validate": "kinara_lms.overrides.sales_invoice.set_company_billing_address",
 	},
 	"Company":{
 		"validate": "kinara_lms.overrides.company.validate_default_disbursement_account",
@@ -245,6 +246,7 @@ fixtures = [
 				"Loan-custom_co_applicants",
 				"Loan-custom_channel_partner",
 				"Loan-custom_colending_partner",
+				"Loan-custom_buyer"
 				"Sales Invoice-custom_loan_details",
 				"Sales Invoice-custom_applicant_name",
 				"Sales Invoice-custom_applicant_mobile_no",
@@ -325,7 +327,8 @@ fixtures = [
 				"Loan Partner-custom_bank_name_collections",
 				"Loan Partner-custom_bank_account_number_collections",
 				"Company-custom_default_disbursement_account",
-				]
+				"Address-custom_geo_type_id",
+			]
 		]
 	]},
 	{"dt": "Property Setter", "filters": [

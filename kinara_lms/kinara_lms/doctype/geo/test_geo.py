@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestGEO(FrappeTestCase):
+class TestGeo(FrappeTestCase):
 	pass
