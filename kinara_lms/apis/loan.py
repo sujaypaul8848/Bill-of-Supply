@@ -29,3 +29,18 @@ def get_loan_list(hub=None,loan_account_number=None,customer_urn=None,customer_n
 		else:
 			loan = a
 	return loan
+
+@frappe.whitelist()
+def get_outstanding_principal(**kwargs):
+	group_by = "branch"
+	where_clause = ""
+	if "branch" in kwargs:
+		where_clause = f"""WHERE loan.branch = "{kwargs["branch"]}" """
+	outstanding_principal = frappe.db.sql(f"""
+    										SELECT
+        										loan.branch, SUM(loan.total_payment - loan.total_interest_payable - loan.total_principal_paid) as outstanding_principal
+    										FROM `tabLoan` as loan
+    										{where_clause}
+											GROUP BY {group_by}
+											""", as_dict = True)
+	return outstanding_principal
