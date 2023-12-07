@@ -32,6 +32,7 @@ doctype_js = {
 	"Loan Partner": "public/js/lending/loan_partner.js",
 	"Loan": "public/js/lending/loan.js",
 	"Company":  "public/js/erpnext/company.js",
+	"Loan Disbursement":  "public/js/erpnext/loan_disbursement.js",
 }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
