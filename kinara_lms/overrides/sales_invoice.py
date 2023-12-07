@@ -68,12 +68,14 @@ def set_company_amount_and_loan_partner_amount_values(doc):
         loan_partner = frappe.get_doc('Loan Partner', doc.loan_partner)
         for item in doc.items:
             for row in loan_partner.shareables:
+                item_found = False
                 if item.item_name == row.shareable_type:
                     item.ratio_percentage = row.partner_collection_percentage
                     item.loan_partner_amount = (item.amount*row.partner_collection_percentage)/100
-                else:
-                    item.ratio_percentage = 0
-                    item.loan_partner_amount = 0
+                    item_found = True
+            if item_found == False:
+                item.ratio_percentage = row.partner_collection_percentage = 0
+                item.loan_partner_amount = 0
     else:
         for item in doc.items:
             item.ratio_percentage = 0
