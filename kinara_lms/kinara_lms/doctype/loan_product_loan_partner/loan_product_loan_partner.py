@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class CoLendingPartners(Document):
+class LoanProductLoanPartner(Document):
 	pass
