@@ -13,7 +13,11 @@ def before_save(doc,method=None):
 def before_validate(doc,method=None):
     if doc.loan_partner:
         set_loan_partner_address(doc)
+    else:
+        doc.loan_partner_address = None             
+        doc.loan_partner_gstin = None
     set_company_billing_address(doc)
+    set_sales_invoice_company_amount_and_loan_partner_amount_values(doc)
     
 
 
@@ -57,3 +61,22 @@ def execute_query(link_name, filter, link_doctype):
                                 {conditions}
                                 LIMIT 1""", as_dict = True)
     return result
+
+
+def set_sales_invoice_company_amount_and_loan_partner_amount_values(doc):
+    if doc.loan_partner:
+        loan_partner = frappe.get_doc('Loan Partner', doc.loan_partner)
+        for item in doc.items:
+            for row in loan_partner.shareables:
+                if item.item_name == row.shareable_type:
+                    item.ratio_percentage = row.partner_collection_percentage
+                    item.loan_partner_amount = (item.amount*row.partner_collection_percentage)/100
+                else:
+                    item.ratio_percentage = 0
+                    item.loan_partner_amount = 0
+    else:
+        for item in doc.items:
+            item.ratio_percentage = 0
+            item.loan_partner_amount = 0
+    for item in doc.items:
+        item.company_amount = item.amount - item.loan_partner_amount
