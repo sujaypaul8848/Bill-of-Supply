@@ -11,8 +11,10 @@ def before_save(doc,method=None):
                 doc.custom_applicant_mobile_no = mobile_no
 
 def before_validate(doc,method=None):
+    if doc.loan_partner:
+        set_loan_partner_address(doc)
     set_company_billing_address(doc)
-    set_loan_partner_address(doc)
+    
 
 
 def set_company_billing_address(doc):
