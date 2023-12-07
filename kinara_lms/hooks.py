@@ -246,14 +246,14 @@ fixtures = [
 				"Loan-custom_co_applicants",
 				"Loan-custom_channel_partner",
 				"Loan-custom_colending_partner",
-				"Loan-custom_buyer"
+				"Loan-custom_buyer",
 				"Sales Invoice-custom_loan_details",
 				"Sales Invoice-custom_applicant_name",
 				"Sales Invoice-custom_applicant_mobile_no",
 				"Sales Invoice-custom_column_break_fkvbq",
-				"Sales Invoice-custom_loan_partner"
-				"Sales Invoice-custom_loan_partner_address"
-				"Sales Invoice-custom_loan_partner_gstin"
+				"Sales Invoice-custom_loan_partner",
+				"Sales Invoice-custom_loan_partner_address",
+				"Sales Invoice-custom_loan_partner_gstin",
 				"Bank Account Type-custom_type_id",
 				"Bank Account Type-custom_value",
 				"Bank Account Type-custom_category_type",
@@ -334,6 +334,9 @@ fixtures = [
 				"Company-custom_default_disbursement_account",
 				"Address-custom_geo_type_id",
 				"Company-custom_gst_regime",
+                "Sales Invoice Item-custom_loan_partner_amount",
+                "Sales Invoice Item-custom_company_amount",
+                "Sales Invoice Item-custom_ratio_percentage",
 			]
 		]
 	]},
@@ -376,6 +379,7 @@ fixtures = [
 				"Sales Invoice-main-field_order",
 				"Company-main-field_order",
 				"Loan Adjustment-main-field_order",
+                "Sales Invoice Item-main-field_order",
 			]
 		]
 	]}
