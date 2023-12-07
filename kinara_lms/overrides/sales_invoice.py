@@ -17,7 +17,7 @@ def before_validate(doc,method=None):
         doc.loan_partner_address = None             
         doc.loan_partner_gstin = None
     set_company_billing_address(doc)
-    set_sales_invoice_company_amount_and_loan_partner_amount_values(doc)
+    set_company_amount_and_loan_partner_amount_values(doc)
     
 
 
@@ -63,7 +63,7 @@ def execute_query(link_name, filter, link_doctype):
     return result
 
 
-def set_sales_invoice_company_amount_and_loan_partner_amount_values(doc):
+def set_company_amount_and_loan_partner_amount_values(doc):
     if doc.loan_partner:
         loan_partner = frappe.get_doc('Loan Partner', doc.loan_partner)
         for item in doc.items:
