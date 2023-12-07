@@ -334,9 +334,9 @@ fixtures = [
 				"Company-custom_default_disbursement_account",
 				"Address-custom_geo_type_id",
 				"Company-custom_gst_regime",
-                "Sales Invoice Item-custom_loan_partner_amount",
-                "Sales Invoice Item-custom_company_amount",
-                "Sales Invoice Item-custom_ratio_percentage",
+				"Sales Invoice Item-custom_loan_partner_amount",
+				"Sales Invoice Item-custom_company_amount",
+				"Sales Invoice Item-custom_ratio_percentage",
 			]
 		]
 	]},
@@ -379,7 +379,7 @@ fixtures = [
 				"Sales Invoice-main-field_order",
 				"Company-main-field_order",
 				"Loan Adjustment-main-field_order",
-                "Sales Invoice Item-main-field_order",
+				"Sales Invoice Item-main-field_order",
 			]
 		]
 	]}
