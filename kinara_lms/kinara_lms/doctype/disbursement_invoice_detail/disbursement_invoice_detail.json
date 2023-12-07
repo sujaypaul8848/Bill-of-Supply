@@ -1,0 +1,96 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-12-06 21:07:52.706868",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "invoice_no",
+  "invoice_date",
+  "invoice_amount",
+  "invoice_due_amount",
+  "invoice_discounting_date",
+  "invoice_repayment_date",
+  "column_break_doer",
+  "buyer_urn",
+  "buyer_name",
+  "discounted_amount",
+  "margin",
+  "invoice_pdf"
+ ],
+ "fields": [
+  {
+   "fieldname": "invoice_no",
+   "fieldtype": "Data",
+   "label": "Invoice No"
+  },
+  {
+   "fieldname": "invoice_date",
+   "fieldtype": "Date",
+   "label": "Invoice Date"
+  },
+  {
+   "fieldname": "invoice_amount",
+   "fieldtype": "Currency",
+   "label": "Invoice Amount"
+  },
+  {
+   "fieldname": "invoice_due_amount",
+   "fieldtype": "Currency",
+   "label": "Invoice Due Amount"
+  },
+  {
+   "fieldname": "invoice_discounting_date",
+   "fieldtype": "Date",
+   "label": "Invoice Discounting Date"
+  },
+  {
+   "fieldname": "invoice_repayment_date",
+   "fieldtype": "Date",
+   "label": "Invoice Repayment Date"
+  },
+  {
+   "fieldname": "column_break_doer",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "buyer_urn",
+   "fieldtype": "Link",
+   "label": "Buyer URN",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "buyer_name",
+   "fieldtype": "Data",
+   "label": "Buyer Name"
+  },
+  {
+   "fieldname": "discounted_amount",
+   "fieldtype": "Currency",
+   "label": "Discounted Amount"
+  },
+  {
+   "fieldname": "margin",
+   "fieldtype": "Data",
+   "label": "Margin"
+  },
+  {
+   "fieldname": "invoice_pdf",
+   "fieldtype": "Attach",
+   "label": "Invoice PDF"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-12-06 21:19:22.519595",
+ "modified_by": "Administrator",
+ "module": "Kinara LMS",
+ "name": "Disbursement Invoice Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
