@@ -465,22 +465,6 @@
  },
  {
   "default_value": null,
-  "doc_type": "Loan Partner",
-  "docstatus": 0,
-  "doctype": "Property Setter",
-  "doctype_or_field": "DocType",
-  "field_name": null,
-  "is_system_generated": 0,
-  "modified": "2023-12-06 17:19:36.827008",
-  "module": null,
-  "name": "Loan Partner-main-field_order",
-  "property": "field_order",
-  "property_type": "Data",
-  "row_name": null,
-  "value": "[\"details_section\", \"partner_code\", \"partner_name\", \"partner_cin\", \"partner_rbi\", \"partner_full_name\", \"partner_base_interest_rate\", \"column_break_yfag\", \"repayment_schedule_type\", \"partner_loan_share_percentage\", \"effective_date\", \"company_loan_share_percentage\", \"company_base_interest_rate\", \"interest_increment_percentage\", \"incremental_interest_applicable\", null, \"custom_disbursement_details\", \"bank_name_disbursement\", \"bank_account_number_disbursement\", \"custom_column_break_xsx3x\", \"ifsc_code_disbursement\", \"escrow_applicable_flag_disbursement\", \"custom_collections_details\", \"bank_name_collections\", \"bank_account_number_collections\", \"custom_column_break_xt3gw\", \"ifsc_code_collections\", \"escrow_applicable_flag_collections\", \"section_break_mpap\", \"column_break_gpwj\", \"organization_type\", \"primary_address\", \"column_break_iwpj\", \"address_html\", \"section_break_lpnj\", \"shareables\", \"fldg_section\", \"fldg_trigger_dpd\", \"fldg_total_percentage\", \"type_of_fldg_applicable\", \"column_break_szii\", \"fldg_limit_calculation_component\", \"fldg_fixed_deposit_percentage\", \"fldg_corporate_guarantee_percentage\", \"misc_section\", \"servicer_fee\", \"processing_fee_billing\", \"kinara_security_emi_shared\", \"kinara_security_emi_partner_ratio\", \"kinara_security_emi_own_ratio\", \"column_break_wujj\", \"restructure_of_loans_applicable\", \"column_break_xyxj\", \"waiving_of_charges_applicable\", \"section_break_scge\", \"partial_payment_mechanism\", \"kinara_details_section\"]"
- },
- {
-  "default_value": null,
   "doc_type": "Sales Invoice Item",
   "docstatus": 0,
   "doctype": "Property Setter",
