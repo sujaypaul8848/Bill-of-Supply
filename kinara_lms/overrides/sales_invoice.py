@@ -1,5 +1,5 @@
 import frappe
-
+from frappe.utils import flt
 def before_save(doc,method=None):
     if doc.loan:
         applicant = frappe.db.get_value('Loan',doc.loan,'custom_individual_applicant')
@@ -70,7 +70,7 @@ def set_company_amount_and_loan_partner_amount_values(doc):
             for row in loan_partner.shareables:
                 if item.item_name == row.shareable_type:
                     item.ratio_percentage = row.partner_collection_percentage
-                    item.loan_partner_amount = (item.amount*row.partner_collection_percentage)/100
+                    item.loan_partner_amount = (flt(item.amount)*flt(row.partner_collection_percentage))/100
                     break
                 else:
                     item.ratio_percentage = 0
@@ -80,4 +80,4 @@ def set_company_amount_and_loan_partner_amount_values(doc):
             item.ratio_percentage = 0
             item.loan_partner_amount = 0
     for item in doc.items:
-        item.company_amount = item.amount - item.loan_partner_amount
+        item.company_amount = flt(item.amount) - flt(item.loan_partner_amount)
