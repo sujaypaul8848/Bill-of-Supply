@@ -84,6 +84,10 @@ def validate_customer_type(doc, method=None):
 	for co_applicant in doc.custom_co_applicants:
 		if frappe.db.get_value('Customer', co_applicant.co_applicant, 'customer_type') != "Individual":
 			frappe.throw(f"Co Applicant Type Should Be Individual: {co_applicant.co_applicant}")
+        
+		for insurance_details in doc.insurance_details:
+			if insurance_details.get('insurer_urn') not in [co_applicant.co_applicant,doc.applicant]:
+				frappe.throw("Same should be Applicant/Co-applicant URN's and Insurer urn")
 
 	for guarantor in doc.custom_guarantors:
 		if frappe.db.get_value('Customer', guarantor.guarantors, 'customer_type') != "Individual":
