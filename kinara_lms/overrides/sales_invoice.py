@@ -32,11 +32,11 @@ def set_company_billing_address(doc):
         filter = f"ads.is_primary_address = 1"          #get company primary address
         result = execute_query(doc.company, filter, "Company")     #will be used when regime is centralied or customer is not present in company state
     if len(result) > 0:
-        doc.loan_partner_address = result[0]['name']          
-        doc.loan_partner_gstin = result[0]['gstin']
+        doc.company_address = result[0]['name']          
+        doc.company_gstin = result[0]['gstin']
     else:
-        doc.loan_partner_address = None          
-        doc.loan_partner_gstin = None
+        doc.company_address = None          
+        doc.company_gstin = None
 
 def set_loan_partner_address(doc,method=None):
     loan_partner_gst_regime = frappe.db.get_value('Loan Partner', doc.loan_partner, 'organization_type')
