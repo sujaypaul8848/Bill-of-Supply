@@ -1,5 +1,5 @@
 import frappe
-from frappe.utils import flt
+from frappe.utils.data import flt
 def before_save(doc,method=None):
     if doc.loan:
         applicant = frappe.db.get_value('Loan',doc.loan,'custom_individual_applicant')
