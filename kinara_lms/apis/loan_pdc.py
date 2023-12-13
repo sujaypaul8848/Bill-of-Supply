@@ -1,4 +1,5 @@
 import frappe
+import json
 
 @frappe.whitelist()
 def update_bulk_loan_pdc(**kwargs):
@@ -6,7 +7,8 @@ def update_bulk_loan_pdc(**kwargs):
 	response = {
 		"data": []
     }
-	for data in kwargs["data"]:
+	body = json.loads(frappe.request.data)
+	for data in body["data"]:
 		response_dict = {
 			"status" : "",
 		}
