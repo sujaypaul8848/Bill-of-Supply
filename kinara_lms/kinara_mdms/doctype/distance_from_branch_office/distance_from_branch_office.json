@@ -43,7 +43,7 @@
  "modified": "2023-11-30 14:07:40.464225",
  "modified_by": "Administrator",
  "module": "Kinara MDMs",
- "name": "Distance from Branch Office",
+ "name": "Distance From Branch Office",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
