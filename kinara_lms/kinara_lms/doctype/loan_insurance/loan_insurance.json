@@ -16,7 +16,10 @@
   "insured_amount",
   "nominee_urn",
   "start_date",
-  "end_date"
+  "end_date",
+  "nominee_name",
+  "relationship",
+  "date_of_birth"
  ],
  "fields": [
   {
@@ -69,11 +72,26 @@
    "fieldname": "end_date",
    "fieldtype": "Date",
    "label": "End Date"
+  },
+  {
+   "fieldname": "nominee_name",
+   "fieldtype": "Data",
+   "label": "Nominee Name"
+  },
+  {
+   "fieldname": "relationship",
+   "fieldtype": "Data",
+   "label": "Relationship"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-18 09:17:17.628581",
+ "modified": "2023-12-15 18:18:04.843512",
  "modified_by": "Administrator",
  "module": "Kinara LMS",
  "name": "Loan Insurance",
