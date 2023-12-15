@@ -8,7 +8,6 @@
  "field_order": [
   "type_id",
   "value",
-  "category_type",
   "disabled"
  ],
  "fields": [
@@ -21,17 +20,9 @@
   },
   {
    "fieldname": "value",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Value",
-   "options": "Bank Account"
-  },
-  {
-   "fieldname": "category_type",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Category Type",
-   "options": "\nIndividual\nBusiness\nAccount"
+   "label": "Value"
   },
   {
    "default": "0",
@@ -43,7 +34,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-14 20:52:48.943127",
+ "modified": "2023-12-15 15:47:12.554535",
  "modified_by": "Administrator",
  "module": "Kinara LMS",
  "name": "Bank Account Purpose",
