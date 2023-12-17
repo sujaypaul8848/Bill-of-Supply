@@ -15,7 +15,7 @@ def bank_account():
 	data = frappe.db.sql("""
 		SELECT
 			bap.name as bank_account_purpose,
-			ba.name as bank_account
+			ba.*
 		FROM `tabBank Account` ba
 		left JOIN `tabBank Account Purpose` bap
 		ON ba.name = bap.value
