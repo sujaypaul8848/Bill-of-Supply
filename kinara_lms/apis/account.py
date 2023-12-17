@@ -16,6 +16,7 @@ def bank_account():
 		SELECT
 			bap.name as bank_account_purpose,
 			ba.*
+			
 		FROM `tabBank Account` ba
 		left JOIN `tabBank Account Purpose` bap
 		ON ba.name = bap.value
