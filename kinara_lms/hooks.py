@@ -146,7 +146,7 @@ doc_events = {
 	},
 	"Company":{
 		"validate": "kinara_lms.overrides.company.validate_default_disbursement_account",
-	},
+	}
 }
 
 # Scheduled Tasks
