@@ -15,11 +15,11 @@
   "insurance_premium",
   "insured_amount",
   "nominee_urn",
-  "start_date",
-  "end_date",
   "nominee_name",
   "relationship",
-  "date_of_birth"
+  "date_of_birth",
+  "start_date",
+  "end_date"
  ],
  "fields": [
   {
@@ -91,7 +91,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-15 18:18:04.843512",
+ "modified": "2023-12-18 10:10:27.689376",
  "modified_by": "Administrator",
  "module": "Kinara LMS",
  "name": "Loan Insurance",
