@@ -1,7 +1,6 @@
 frappe.ui.form.on("Address", {
     geo_type_id: function(frm){
-        // setState(frm);
-        console.log("hello")
+        setState(frm);
     },
 });
 function setState(frm){
