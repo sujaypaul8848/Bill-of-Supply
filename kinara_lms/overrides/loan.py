@@ -90,7 +90,7 @@ def validate_customer_type(doc, method=None):
         
 		if hasattr(doc,'insurance_details'):
 			for insurance_details in doc.insurance_details:
-				if insurance_details.get('insurer_urn') not in [co_applicant.co_applicant,doc.applicant]:
+				if insurance_details.get('insurer_urn') not in [co_applicant.co_applicant,doc.custom_individual_applicant]:
 					frappe.throw("Same should be Applicant/Co-applicant URN's and Insurer urn")
 
 	for guarantor in doc.custom_guarantors:
