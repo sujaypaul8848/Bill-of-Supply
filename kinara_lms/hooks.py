@@ -128,7 +128,7 @@ doc_events = {
 		"validate": "kinara_lms.overrides.loan_product.validate_loan_product_code",
 	},
 	"Address": {
-        "before_validate": "kinara_lms.overrides.address.before_validate",
+		"before_validate": "kinara_lms.overrides.address.before_validate",
 		"validate": "kinara_lms.overrides.address.kinara_address_validate",
 	},
 	"Contact": {
