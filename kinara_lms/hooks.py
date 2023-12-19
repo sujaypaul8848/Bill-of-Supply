@@ -33,6 +33,7 @@ doctype_js = {
 	"Loan": "public/js/lending/loan.js",
 	"Company":  "public/js/erpnext/company.js",
 	"Loan Disbursement":  "public/js/erpnext/loan_disbursement.js",
+	"Address":  "public/js/erpnext/address.js",
 }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
@@ -127,6 +128,7 @@ doc_events = {
 		"validate": "kinara_lms.overrides.loan_product.validate_loan_product_code",
 	},
 	"Address": {
+        "before_validate": "kinara_lms.overrides.address.before_validate",
 		"validate": "kinara_lms.overrides.address.kinara_address_validate",
 	},
 	"Contact": {
