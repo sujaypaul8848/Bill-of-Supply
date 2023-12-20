@@ -369,7 +369,6 @@ fixtures = [
 				"Loan Product-penalty_interest_method-reqd",
 				"Loan Adjustment-is_foreclosure-hidden",
 				"Loan Partner-main-field_order",
-				"Loan-loan_partner-hidden",
 				"Sales Invoice-main-field_order",
 				"Company-main-field_order",
 				"Loan Adjustment-main-field_order",
