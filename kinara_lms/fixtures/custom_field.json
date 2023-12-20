@@ -32,7 +32,7 @@
   "label": "Type ID",
   "length": 0,
   "mandatory_depends_on": null,
-  "modified": "2023-12-04 11:29:00.490016",
+  "modified": "2023-12-30 11:29:00.490016",
   "module": null,
   "name": "Loan Security Type-custom_type_id",
   "no_copy": 0,
@@ -50,7 +50,7 @@
   "search_index": 0,
   "sort_options": 0,
   "translatable": 1,
-  "unique": 1,
+  "unique": 0,
   "width": null
  },
  {
@@ -158,7 +158,7 @@
   "search_index": 0,
   "sort_options": 0,
   "translatable": 1,
-  "unique": 1,
+  "unique": 0,
   "width": null
  },
  {
@@ -194,7 +194,7 @@
   "label": "Type ID",
   "length": 0,
   "mandatory_depends_on": null,
-  "modified": "2023-11-30 10:41:06.637163",
+  "modified": "2023-12-20 10:41:06.637163",
   "module": null,
   "name": "Gender-custom_type_id",
   "no_copy": 0,
