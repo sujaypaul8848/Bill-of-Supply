@@ -8,6 +8,7 @@
  "field_order": [
   "type_id",
   "value",
+  "category_type",
   "disabled"
  ],
  "fields": [
@@ -30,11 +31,17 @@
    "fieldtype": "Check",
    "in_list_view": 1,
    "label": "Disabled"
+  },
+  {
+   "fieldname": "category_type",
+   "fieldtype": "Select",
+   "label": "Category Type",
+   "options": "\nIndividual\nBusiness\nAccount"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-15 15:47:12.554535",
+ "modified": "2023-12-20 15:26:38.684893",
  "modified_by": "Administrator",
  "module": "Kinara LMS",
  "name": "Bank Account Purpose",
