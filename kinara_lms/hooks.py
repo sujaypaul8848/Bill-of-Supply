@@ -244,12 +244,6 @@ fixtures = [
 	{"dt": "Custom Field", "filters": [
 		[
 			"name", "in", [
-				"Loan-custom_individual_applicant",
-				"Loan-custom_guarantors",
-				"Loan-custom_co_applicants",
-				"Loan-custom_channel_partner",
-				"Loan-custom_colending_partner",
-				"Loan-custom_buyer",
 				"Sales Invoice-custom_loan_details",
 				"Sales Invoice-custom_applicant_name",
 				"Sales Invoice-custom_applicant_mobile_no",
@@ -375,7 +369,6 @@ fixtures = [
 				"Loan Product-penalty_interest_method-reqd",
 				"Loan Adjustment-is_foreclosure-hidden",
 				"Loan Partner-main-field_order",
-				"Loan-main-field_order",
 				"Loan-loan_partner-hidden",
 				"Sales Invoice-main-field_order",
 				"Company-main-field_order",
