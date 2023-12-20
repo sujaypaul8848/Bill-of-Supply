@@ -15,10 +15,10 @@ function setState(frm){
         },
         callback: function(response) {
             if (response.message.hasOwnProperty('state')) {
-                cur_frm.set_value("state", response.message.state);
+                frm.set_value("state", response.message.state);
             }
             else{
-                cur_frm.set_value("state", null);
+                frm.set_value("state", null);
             }
         }
     });
