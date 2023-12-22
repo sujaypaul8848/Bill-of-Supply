@@ -155,7 +155,7 @@ def get_loan_pdc_not_active(**kwargs):
 												JOIN `tabLoan Repayment Schedule` AS loan_repayment_schedule 
 								  				ON loan_pdc.loan_repayment_schedule = "{active_repayment_schedule['loan_repayment_schedule_name']}"
 												JOIN `tabRepayment Schedule` AS repayment_schedule 
-								  				ON loan_pdc.emi = repayment_schedule.name AND loan_repayment_schedule.name = "{active_repayment_schedule['loan_repayment_schedule_name']}"
+								  				ON loan_pdc.emi = repayment_schedule.name AND repayment_schedule.parent = "{active_repayment_schedule['loan_repayment_schedule_name']}"
 												WHERE loan_pdc.loan = "{loan['name']}" """, as_dict = True)
 				for loan_pdc in loan_pdc_list:
 					loan_pdc_dict = {}
@@ -207,11 +207,11 @@ def get_loan_partial_pdc(**kwargs):
 												JOIN `tabLoan Repayment Schedule` AS loan_repayment_schedule 
 								  				ON loan_pdc.loan_repayment_schedule = "{active_repayment_schedule['loan_repayment_schedule_name']}"
 												JOIN `tabRepayment Schedule` AS repayment_schedule 
-								  				ON loan_pdc.emi = repayment_schedule.name AND loan_repayment_schedule.name = "{active_repayment_schedule['loan_repayment_schedule_name']}"
+								  				ON loan_pdc.emi = repayment_schedule.name AND repayment_schedule.parent = "{active_repayment_schedule['loan_repayment_schedule_name']}"
 												WHERE loan_pdc.loan = "{loan['name']}" """)
 				flattened_loan_pdc_list = [item for sublist in loan_pdc_list for item in sublist]
 				loan_repayment_schedule_doc = frappe.get_doc("Loan Repayment Schedule", active_repayment_schedule['loan_repayment_schedule_name'])
-				if len(loan_repayment_schedule_doc.repayment_schedule) != len(loan_pdc_list):
+				if len(loan_repayment_schedule_doc.repayment_schedule) <= len(flattened_loan_pdc_list):
 					loan_account_valid = False
 					loan_pdc_emi_list = frappe.db.sql("""SELECT loan_pdc.emi
     													FROM `tabLoan PDC` AS loan_pdc
