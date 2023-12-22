@@ -94,7 +94,10 @@ def get_loan_ach_not_active(**kwargs):
 				loan_ach_dict = {}
 				loan_ach_dict["ACH Registration Number"] = loan_ach_doc['loan_ach_name']
 				loan_ach_dict['Loan Repayment Schedule'] = loan_ach_doc['loan_repayment_schedule_name']
-				docstatus, ach_start_date,  ach_end_date = frappe.db.get_value('Loan ACH', loan_ach_doc['loan_ach_name'], ['docstatus', 'ach_start_date', 'ach_end_date'])
+				loan_ach_document = frappe.get_doc('Loan ACH', loan_ach_doc['loan_ach_name'])
+				docstatus = loan_ach_document.docstatus
+				ach_start_date = loan_ach_document.ach_start_date
+				ach_end_date = loan_ach_document.ach_end_date
 				loan_ach_dict["Loan ACH Docstatus"] = docstatus
 				if docstatus == 1:
 					loan_repayment_schedule = frappe.get_doc('Loan Repayment Schedule', loan_ach_doc['loan_repayment_schedule_name'])
