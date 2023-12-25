@@ -284,7 +284,6 @@ fixtures = [
 				"Bank-custom_disabled",
 				"Loan Security Type-custom_collateral_type_id",
 				"Loan Security Type-custom_collateral_type",
-				"Loan Product-custom_moratorium_types_allowed",
 				"Loan Product-custom_base_rate",
 				"Loan Product-custom_write_off__knockoff_sequence",
 				"Loan Product-custom_npa_knockoff_sequence",
