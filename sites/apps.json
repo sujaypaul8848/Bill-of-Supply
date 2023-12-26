@@ -1,0 +1,91 @@
+{
+    "frappe": {
+        "resolution": {
+            "commit_hash": null,
+            "branch": null
+        },
+        "required": [],
+        "idx": 1,
+        "version": "15.4.1"
+    },
+    "klms": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "59a416d873133be48e7772b381510dc320b79858",
+            "branch": "develop"
+        },
+        "required": [],
+        "idx": 2,
+        "version": "0.0.1"
+    },
+    "payments": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "523b184a2c61e889e8198b92b7e52eef1ff89dd2",
+            "branch": "develop"
+        },
+        "required": [],
+        "idx": 3,
+        "version": "0.0.1"
+    },
+    "erpnext": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "6826a1e97643155bac97a0d4fbd977528bb34798",
+            "branch": "version-15"
+        },
+        "required": [],
+        "idx": 4,
+        "version": "15.5.0"
+    },
+    "india_compliance": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "57d428f68c3b8fcabdcebb252dac349a48b4e686",
+            "branch": "develop"
+        },
+        "required": [],
+        "idx": 5,
+        "version": "16.0.0-dev"
+    },
+    "email_delivery_service": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "9174db34b957d9ecfb338a80dfcf0737dc601d3b",
+            "branch": "main"
+        },
+        "required": [],
+        "idx": 6,
+        "version": "0.0.1"
+    },
+    "lending": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "fa9558a0108a105d28fe51ed98821ae876c6fafc",
+            "branch": "poc-staging"
+        },
+        "required": [],
+        "idx": 7,
+        "version": "0.0.1"
+    },
+    "kinara_lms": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "307937719db62a8f08057a1bcd7dacb439b26ce9",
+            "branch": "develop"
+        },
+        "required": [],
+        "idx": 8,
+        "version": "0.0.1"
+    },
+    "kinara": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "0aa7553f38c4b78cf50c6b6ae237da18277930ae",
+            "branch": "develop"
+        },
+        "required": [],
+        "idx": 9,
+        "version": "0.0.1"
+    }
+}

@@ -1,0 +1,9 @@
+frappe
+erpnext
+email_delivery_service
+kinara
+lending
+payments
+india_compliance
+klms
+kinara_lms

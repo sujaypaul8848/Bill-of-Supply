@@ -1,0 +1,272 @@
+2023-12-07 18:54:33,512 DEBUG cd frappe-bench && python3 -m venv env
+2023-12-07 18:54:37,238 DEBUG cd frappe-bench && /home/sujay/lms/frappe-bench/env/bin/python -m pip install --quiet --upgrade pip
+2023-12-07 18:54:39,620 DEBUG cd frappe-bench && /home/sujay/lms/frappe-bench/env/bin/python -m pip install --quiet wheel
+2023-12-07 18:54:41,137 LOG Getting frappe
+2023-12-07 18:54:41,137 DEBUG cd frappe-bench/apps && git clone https://github.com/frappe/frappe.git --branch version-15 --depth 1 --origin upstream
+2023-12-07 18:54:44,702 LOG Installing frappe
+2023-12-07 18:54:44,702 DEBUG cd /home/sujay/lms/frappe-bench && /home/sujay/lms/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/sujay/lms/frappe-bench/apps/frappe 
+2023-12-07 18:55:23,675 DEBUG cd /home/sujay/lms/frappe-bench/apps/frappe && yarn install
+2023-12-07 18:55:42,179 WARNING restart failed: Couldn't find supervisorctl in PATH
+2023-12-07 18:55:42,179 DEBUG cd frappe-bench && bench build
+2023-12-07 18:55:42,314 INFO /usr/local/bin/bench build
+2023-12-07 18:56:12,143 LOG setting up backups
+2023-12-07 18:56:12,150 LOG backups were set up
+2023-12-07 18:56:12,151 INFO Bench frappe-bench initialized
+2023-12-07 18:56:49,702 INFO /usr/local/bin/bench new-app klms
+2023-12-07 18:56:49,707 LOG creating new app klms
+2023-12-07 18:57:08,576 LOG Installing klms
+2023-12-07 18:57:08,577 DEBUG cd /home/sujay/lms/frappe-bench && /home/sujay/lms/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/sujay/lms/frappe-bench/apps/klms 
+2023-12-07 18:57:11,990 DEBUG bench build --app klms
+2023-12-07 18:57:12,128 INFO /usr/local/bin/bench build --app klms
+2023-12-07 18:57:14,528 WARNING restart failed: Couldn't find supervisorctl in PATH
+2023-12-07 18:57:33,408 INFO /usr/local/bin/bench new-site klms.com
+2023-12-07 18:58:46,542 INFO /usr/local/bin/bench get-app payments
+2023-12-07 18:58:47,005 LOG Getting payments
+2023-12-07 18:58:47,005 DEBUG cd ./apps && git clone https://github.com/frappe/payments.git  --depth 1 --origin upstream
+2023-12-07 18:58:47,905 LOG Installing payments
+2023-12-07 18:58:48,065 DEBUG cd /home/sujay/lms/frappe-bench && /home/sujay/lms/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/sujay/lms/frappe-bench/apps/payments 
+2023-12-07 18:58:54,281 DEBUG bench build --app payments
+2023-12-07 18:58:54,412 INFO /usr/local/bin/bench build --app payments
+2023-12-07 18:58:56,857 WARNING restart failed: Couldn't find supervisorctl in PATH
+2023-12-07 18:59:01,078 INFO /usr/local/bin/bench get-app erpnext --branch version-15
+2023-12-07 18:59:01,565 LOG Getting erpnext
+2023-12-07 18:59:01,565 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git --branch version-15 --depth 1 --origin upstream
+2023-12-07 18:59:05,881 LOG Installing erpnext
+2023-12-07 18:59:06,046 DEBUG cd /home/sujay/lms/frappe-bench && /home/sujay/lms/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/sujay/lms/frappe-bench/apps/erpnext 
+2023-12-07 18:59:14,013 DEBUG cd /home/sujay/lms/frappe-bench/apps/erpnext && yarn install
+2023-12-07 18:59:14,480 DEBUG bench build --app erpnext
+2023-12-07 18:59:14,642 INFO /usr/local/bin/bench build --app erpnext
+2023-12-07 18:59:18,495 WARNING restart failed: Couldn't find supervisorctl in PATH
+2023-12-07 18:59:44,112 INFO /usr/local/bin/bench --site klms.com install-app klms
+2023-12-07 18:59:58,765 INFO /usr/local/bin/bench --site klms.com install-app payments
+2023-12-07 19:00:10,558 INFO /usr/local/bin/bench --site klms.com install-app erpnext
+2023-12-07 19:02:13,697 INFO /usr/local/bin/bench use klms.com
+2023-12-07 19:02:17,754 INFO /usr/local/bin/bench start
+2023-12-07 19:02:18,213 INFO /usr/local/bin/bench schedule
+2023-12-07 19:02:18,244 INFO /usr/local/bin/bench worker
+2023-12-07 19:02:18,245 INFO /usr/local/bin/bench watch
+2023-12-07 19:02:18,336 INFO /usr/local/bin/bench serve --port 8000
+2023-12-08 12:00:02,175 INFO /usr/local/bin/bench --verbose --site all backup
+2023-12-08 18:00:01,341 INFO /usr/local/bin/bench --verbose --site all backup
+2023-12-11 10:44:49,893 INFO /usr/local/bin/bench use klms.com
+2023-12-11 10:44:57,334 INFO /usr/local/bin/bench start
+2023-12-11 10:44:57,869 INFO /usr/local/bin/bench worker
+2023-12-11 10:44:57,876 INFO /usr/local/bin/bench schedule
+2023-12-11 10:44:57,887 INFO /usr/local/bin/bench serve --port 8000
+2023-12-11 10:44:57,911 INFO /usr/local/bin/bench watch
+2023-12-11 10:50:23,744 INFO /usr/local/bin/bench get-app https://github.com/resilient-tech/india-compliance.git --branch develop
+2023-12-11 10:50:23,756 LOG Getting india-compliance
+2023-12-11 10:50:23,756 DEBUG cd ./apps && git clone https://github.com/resilient-tech/india-compliance.git --branch develop --depth 1 --origin upstream
+2023-12-11 10:50:24,919 LOG Installing india_compliance
+2023-12-11 10:50:25,144 DEBUG cd /home/sujay/lms/frappe-bench && /home/sujay/lms/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/sujay/lms/frappe-bench/apps/india_compliance 
+2023-12-11 10:50:29,524 DEBUG bench build --app india_compliance
+2023-12-11 10:50:29,664 INFO /usr/local/bin/bench build --app india_compliance
+2023-12-11 10:50:33,247 WARNING restart failed: Couldn't find supervisorctl in PATH
+2023-12-11 10:51:26,544 INFO /usr/local/bin/bench get-app https://github.com/frappe/email_delivery_service.git --branch main
+2023-12-11 10:51:26,554 LOG Getting email_delivery_service
+2023-12-11 10:51:26,555 DEBUG cd ./apps && git clone https://github.com/frappe/email_delivery_service.git --branch main --depth 1 --origin upstream
+2023-12-11 10:51:27,386 LOG Installing email_delivery_service
+2023-12-11 10:51:27,644 DEBUG cd /home/sujay/lms/frappe-bench && /home/sujay/lms/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/sujay/lms/frappe-bench/apps/email_delivery_service 
+2023-12-11 10:51:30,134 DEBUG bench build --app email_delivery_service
+2023-12-11 10:51:30,273 INFO /usr/local/bin/bench build --app email_delivery_service
+2023-12-11 10:51:32,900 WARNING restart failed: Couldn't find supervisorctl in PATH
+2023-12-11 10:53:22,575 INFO /usr/local/bin/bench --site klms.com install-app india_compliance
+2023-12-11 10:54:10,646 INFO /usr/local/bin/bench --site klms.com install-app email_delivery_service
+2023-12-11 10:54:35,109 INFO /usr/local/bin/bench start
+2023-12-11 10:54:35,613 INFO /usr/local/bin/bench watch
+2023-12-11 10:54:35,644 INFO /usr/local/bin/bench worker
+2023-12-11 10:54:35,686 INFO /usr/local/bin/bench serve --port 8000
+2023-12-11 10:54:35,690 INFO /usr/local/bin/bench schedule
+2023-12-11 10:56:20,213 INFO /usr/local/bin/bench get-app https://github.com/frappe/lending.git --branch main
+2023-12-11 10:56:20,223 LOG Getting lending
+2023-12-11 10:56:20,223 DEBUG cd ./apps && git clone https://github.com/frappe/lending.git --branch main --depth 1 --origin upstream
+2023-12-11 10:56:20,812 WARNING cd ./apps && git clone https://github.com/frappe/lending.git --branch main --depth 1 --origin upstream executed with exit code 128
+2023-12-11 10:56:20,813 WARNING /usr/local/bin/bench get-app https://github.com/frappe/lending.git --branch main executed with exit code 1
+2023-12-11 10:56:34,974 INFO /usr/local/bin/bench get-app https://github.com/frappe/lending.git --branch develop
+2023-12-11 10:56:34,984 LOG Getting lending
+2023-12-11 10:56:34,984 DEBUG cd ./apps && git clone https://github.com/frappe/lending.git --branch develop --depth 1 --origin upstream
+2023-12-11 10:56:35,921 LOG Installing lending
+2023-12-11 10:56:36,155 DEBUG cd /home/sujay/lms/frappe-bench && /home/sujay/lms/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/sujay/lms/frappe-bench/apps/lending 
+2023-12-11 10:56:40,138 DEBUG bench build --app lending
+2023-12-11 10:56:40,292 INFO /usr/local/bin/bench build --app lending
+2023-12-11 10:56:43,124 WARNING restart failed: Couldn't find supervisorctl in PATH
+2023-12-11 10:57:07,167 INFO /usr/local/bin/bench --site klms.com install-app lending
+2023-12-11 10:58:40,816 INFO /usr/local/bin/bench start
+2023-12-11 10:58:41,239 INFO /usr/local/bin/bench schedule
+2023-12-11 10:58:41,253 INFO /usr/local/bin/bench watch
+2023-12-11 10:58:41,309 INFO /usr/local/bin/bench worker
+2023-12-11 10:58:41,310 INFO /usr/local/bin/bench serve --port 8000
+2023-12-11 11:02:12,988 INFO /usr/local/bin/bench --site klms.com install-app lending
+2023-12-11 11:03:14,128 INFO /usr/local/bin/bench --site klms.com uninstall-app lending
+2023-12-11 11:04:00,540 INFO /usr/local/bin/bench remove-app lending
+2023-12-11 11:04:00,677 INFO /usr/local/bin/bench --site all list-apps --format json
+2023-12-11 11:04:02,024 INFO /usr/local/bin/bench --site klms.com list-apps
+2023-12-11 11:04:03,409 DEBUG cd /home/sujay/lms/frappe-bench && /home/sujay/lms/frappe-bench/env/bin/python -m pip uninstall -y lending
+2023-12-11 11:04:04,256 INFO App moved from apps/lending to archived/apps/lending-2023-12-11
+2023-12-11 11:04:04,261 WARNING restart failed: Couldn't find supervisorctl in PATH
+2023-12-11 11:05:12,902 INFO /usr/local/bin/bench get-app https://github.com/frappe/lending.git --branch poc-staging
+2023-12-11 11:05:12,910 LOG Getting lending
+2023-12-11 11:05:12,911 DEBUG cd ./apps && git clone https://github.com/frappe/lending.git --branch poc-staging --depth 1 --origin upstream
+2023-12-11 11:05:13,849 LOG Installing lending
+2023-12-11 11:05:14,214 DEBUG cd /home/sujay/lms/frappe-bench && /home/sujay/lms/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/sujay/lms/frappe-bench/apps/lending 
+2023-12-11 11:05:19,674 DEBUG bench build --app lending
+2023-12-11 11:05:19,881 INFO /usr/local/bin/bench build --app lending
+2023-12-11 11:05:23,399 WARNING restart failed: Couldn't find supervisorctl in PATH
+2023-12-11 11:06:16,799 INFO /usr/local/bin/bench --site klms.com install-app lending
+2023-12-11 11:06:56,990 INFO /usr/local/bin/bench migrate
+2023-12-11 11:08:54,549 INFO /usr/local/bin/bench migrate
+2023-12-11 11:12:59,256 INFO /usr/local/bin/bench --site uninstall-app lending
+2023-12-11 11:13:16,329 INFO /usr/local/bin/bench --site klms.com uninstall-app lending
+2023-12-11 11:14:14,293 INFO /usr/local/bin/bench --site klms.com install-app lending
+2023-12-11 11:14:32,661 INFO /usr/local/bin/bench migrate
+2023-12-11 11:17:46,395 INFO /usr/local/bin/bench start
+2023-12-11 11:17:46,837 INFO /usr/local/bin/bench serve --port 8000
+2023-12-11 11:17:46,875 INFO /usr/local/bin/bench watch
+2023-12-11 11:17:46,894 INFO /usr/local/bin/bench worker
+2023-12-11 11:17:47,020 INFO /usr/local/bin/bench schedule
+2023-12-11 11:26:05,090 INFO /usr/local/bin/bench get-app https://github.com/erpnext-apps/kinara_lms.git --branch develop
+2023-12-11 11:26:05,102 LOG Getting kinara_lms
+2023-12-11 11:26:05,102 DEBUG cd ./apps && git clone https://github.com/erpnext-apps/kinara_lms.git --branch develop --depth 1 --origin upstream
+2023-12-11 11:26:06,059 LOG Installing kinara_lms
+2023-12-11 11:26:06,407 DEBUG cd /home/sujay/lms/frappe-bench && /home/sujay/lms/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/sujay/lms/frappe-bench/apps/kinara_lms 
+2023-12-11 11:26:10,120 DEBUG bench build --app kinara_lms
+2023-12-11 11:26:10,305 INFO /usr/local/bin/bench build --app kinara_lms
+2023-12-11 11:26:13,135 WARNING restart failed: Couldn't find supervisorctl in PATH
+2023-12-11 11:26:33,772 INFO /usr/local/bin/bench --site klms.com install-app kinara_lms
+2023-12-11 11:33:36,063 INFO /usr/local/bin/bench start
+2023-12-11 11:33:36,508 INFO /usr/local/bin/bench worker
+2023-12-11 11:33:36,528 INFO /usr/local/bin/bench schedule
+2023-12-11 11:33:36,581 INFO /usr/local/bin/bench watch
+2023-12-11 11:33:36,626 INFO /usr/local/bin/bench serve --port 8000
+2023-12-11 11:33:43,581 INFO /usr/local/bin/bench --site klms.com uninstall-app kinara_lms
+2023-12-11 11:34:40,094 INFO /usr/local/bin/bench --site klms.com install-app kinara_lms
+2023-12-11 11:36:26,476 INFO /usr/local/bin/bench --site klms.com uninstall-app kinara_lms
+2023-12-11 11:36:44,373 INFO /usr/local/bin/bench --site klms.com install-app kinara_lms
+2023-12-11 11:38:23,515 INFO /usr/local/bin/bench migrate
+2023-12-11 11:45:21,744 INFO /usr/local/bin/bench site klms.com restore sites/klms.com/20231207_120007-kinara_com-database.sql.gz
+2023-12-11 11:45:36,007 INFO /usr/local/bin/bench --site klms.com restore sites/klms.com/20231207_120007-kinara_com-database.sql.gz
+2023-12-11 11:47:50,612 INFO /usr/local/bin/bench migrate
+2023-12-11 11:49:18,001 INFO /usr/local/bin/bench start
+2023-12-11 11:49:18,495 INFO /usr/local/bin/bench worker
+2023-12-11 11:49:18,506 INFO /usr/local/bin/bench serve --port 8000
+2023-12-11 11:49:18,592 INFO /usr/local/bin/bench schedule
+2023-12-11 11:49:18,646 INFO /usr/local/bin/bench watch
+2023-12-11 12:00:01,783 INFO /usr/local/bin/bench --verbose --site all backup
+2023-12-11 13:16:55,312 INFO /usr/local/bin/bench start
+2023-12-11 13:16:55,800 INFO /usr/local/bin/bench schedule
+2023-12-11 13:16:55,801 INFO /usr/local/bin/bench serve --port 8000
+2023-12-11 13:16:55,836 INFO /usr/local/bin/bench worker
+2023-12-11 13:16:55,840 INFO /usr/local/bin/bench watch
+2023-12-11 18:00:02,169 INFO /usr/local/bin/bench --verbose --site all backup
+2023-12-12 10:44:57,375 INFO /usr/local/bin/bench use klms.com
+2023-12-12 10:45:05,034 INFO /usr/local/bin/bench start
+2023-12-12 10:45:05,580 INFO /usr/local/bin/bench watch
+2023-12-12 10:45:05,586 INFO /usr/local/bin/bench serve --port 8000
+2023-12-12 10:45:05,603 INFO /usr/local/bin/bench schedule
+2023-12-12 10:45:05,632 INFO /usr/local/bin/bench worker
+2023-12-12 12:00:01,443 INFO /usr/local/bin/bench --verbose --site all backup
+2023-12-12 12:04:56,529 INFO /usr/local/bin/bench start
+2023-12-12 12:04:56,987 INFO /usr/local/bin/bench watch
+2023-12-12 12:04:57,033 INFO /usr/local/bin/bench schedule
+2023-12-12 12:04:57,055 INFO /usr/local/bin/bench serve --port 8000
+2023-12-12 12:04:57,067 INFO /usr/local/bin/bench worker
+2023-12-12 12:30:01,452 INFO /usr/local/bin/bench set-config -g server_script_enabled 1
+2023-12-12 18:00:01,947 INFO /usr/local/bin/bench --verbose --site all backup
+2023-12-13 12:00:01,292 INFO /usr/local/bin/bench --verbose --site all backup
+2023-12-13 18:00:01,849 INFO /usr/local/bin/bench --verbose --site all backup
+2023-12-14 12:00:02,005 INFO /usr/local/bin/bench --verbose --site all backup
+2023-12-14 18:00:01,761 INFO /usr/local/bin/bench --verbose --site all backup
+2023-12-15 12:00:01,604 INFO /usr/local/bin/bench --verbose --site all backup
+2023-12-15 18:00:01,823 INFO /usr/local/bin/bench --verbose --site all backup
+2023-12-18 12:00:01,372 INFO /usr/local/bin/bench --verbose --site all backup
+2023-12-18 18:00:01,508 INFO /usr/local/bin/bench --verbose --site all backup
+2023-12-19 12:00:01,569 INFO /usr/local/bin/bench --verbose --site all backup
+2023-12-19 18:00:02,088 INFO /usr/local/bin/bench --verbose --site all backup
+2023-12-20 12:00:02,082 INFO /usr/local/bin/bench --verbose --site all backup
+2023-12-20 18:00:01,975 INFO /usr/local/bin/bench --verbose --site all backup
+2023-12-21 12:00:01,316 INFO /usr/local/bin/bench --verbose --site all backup
+2023-12-21 18:00:01,602 INFO /usr/local/bin/bench --verbose --site all backup
+2023-12-22 12:00:01,884 INFO /usr/local/bin/bench --verbose --site all backup
+2023-12-22 12:07:53,647 INFO /usr/local/bin/bench use klms.com
+2023-12-22 12:07:58,178 INFO /usr/local/bin/bench start
+2023-12-22 12:07:58,633 INFO /usr/local/bin/bench serve --port 8000
+2023-12-22 12:07:58,665 INFO /usr/local/bin/bench schedule
+2023-12-22 12:07:58,709 INFO /usr/local/bin/bench watch
+2023-12-22 12:07:58,718 INFO /usr/local/bin/bench worker
+2023-12-22 12:47:14,027 INFO /usr/local/bin/bench --site klms.com restore /sites/20231222_114512-kinara-erpnext-uat_frappe_cloud-database.sql.gz
+2023-12-22 12:47:31,926 INFO /usr/local/bin/bench --site klms.com restore /sites/klms.com/20231222_114512-kinara-erpnext-uat_frappe_cloud-database.sql.gz
+2023-12-22 12:48:16,445 INFO /usr/local/bin/bench --site klms.com restore sites/klms.com/20231222_114512-kinara-erpnext-uat_frappe_cloud-database.sql.gz
+2023-12-22 18:00:01,828 INFO /usr/local/bin/bench --verbose --site all backup
+2023-12-26 10:15:36,482 INFO /usr/local/bin/bench use klms.com
+2023-12-26 10:15:42,750 INFO /usr/local/bin/bench start
+2023-12-26 10:15:43,284 INFO /usr/local/bin/bench serve --port 8000
+2023-12-26 10:15:43,318 INFO /usr/local/bin/bench worker
+2023-12-26 10:15:43,326 INFO /usr/local/bin/bench schedule
+2023-12-26 10:15:43,346 INFO /usr/local/bin/bench watch
+2023-12-26 11:19:29,663 INFO /usr/local/bin/bench new-app kinara
+2023-12-26 11:19:29,671 LOG creating new app kinara
+2023-12-26 11:19:48,146 LOG Installing kinara
+2023-12-26 11:19:48,150 DEBUG cd /home/sujay/lms/frappe-bench && /home/sujay/lms/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/sujay/lms/frappe-bench/apps/kinara 
+2023-12-26 11:19:52,940 DEBUG bench build --app kinara
+2023-12-26 11:19:53,078 INFO /usr/local/bin/bench build --app kinara
+2023-12-26 11:19:56,206 WARNING restart failed: Couldn't find supervisorctl in PATH
+2023-12-26 11:20:21,937 INFO /usr/local/bin/bench start
+2023-12-26 11:20:22,402 INFO /usr/local/bin/bench watch
+2023-12-26 11:20:22,441 INFO /usr/local/bin/bench worker
+2023-12-26 11:20:22,467 INFO /usr/local/bin/bench serve --port 8000
+2023-12-26 11:20:22,535 INFO /usr/local/bin/bench schedule
+2023-12-26 11:22:34,528 INFO /usr/local/bin/bench --site klms.com install-app kinara
+2023-12-26 11:28:08,514 INFO /usr/local/bin/bench set-config -g developer_mode 1
+2023-12-26 11:30:34,306 INFO /usr/local/bin/bench set-config -g developer_mode 1
+2023-12-26 11:46:38,796 INFO /usr/local/bin/bench restart
+2023-12-26 11:46:38,803 WARNING restart failed: Couldn't find supervisorctl in PATH
+2023-12-26 11:47:09,920 INFO /usr/local/bin/bench restart
+2023-12-26 11:47:09,928 WARNING restart failed: Couldn't find supervisorctl in PATH
+2023-12-26 11:47:24,261 INFO /usr/local/bin/bench migrate
+2023-12-26 11:47:32,492 INFO /usr/local/bin/bench stat
+2023-12-26 11:47:36,827 INFO /usr/local/bin/bench start
+2023-12-26 11:47:37,373 INFO /usr/local/bin/bench schedule
+2023-12-26 11:47:37,385 INFO /usr/local/bin/bench watch
+2023-12-26 11:47:37,440 INFO /usr/local/bin/bench worker
+2023-12-26 11:47:37,449 INFO /usr/local/bin/bench serve --port 8000
+2023-12-26 11:47:45,574 INFO /usr/local/bin/bench megrate
+2023-12-26 11:47:51,701 INFO /usr/local/bin/bench migrate
+2023-12-26 11:49:24,206 INFO /usr/local/bin/bench setup requirements --dev
+2023-12-26 11:49:25,207 DEBUG cd /home/sujay/lms/frappe-bench && /home/sujay/lms/frappe-bench/env/bin/python -m pip install --quiet --upgrade coverage~=6.5.0 Faker~=18.10.1 pyngrok~=6.0.0 unittest-xml-reporting~=3.2.0 watchdog~=3.0.0 hypothesis~=6.77.0 responses==0.23.1 freezegun~=1.2.2 
+2023-12-26 11:49:33,749 DEBUG cd /home/sujay/lms/frappe-bench && /home/sujay/lms/frappe-bench/env/bin/python -m pip install --quiet --upgrade parameterized~=0.8.1 time-machine~=2.10.0 
+2023-12-26 11:52:16,318 INFO /usr/local/bin/bench --site klms.com console
+2023-12-26 12:00:01,241 INFO /usr/local/bin/bench --verbose --site all backup
+2023-12-26 12:05:48,032 INFO /usr/local/bin/bench update --requirements
+2023-12-26 12:05:49,086 WARNING shallow_clone is set in your bench config.
+However without passing the --reset flag, your repositories will be unshallowed.
+To avoid this, cancel this operation and run `bench update --reset`.
+
+Consider the consequences of `git reset --hard` on your apps before you run that.
+To avoid seeing this warning, set shallow_clone to false in your common_site_config.json
+		
+2023-12-26 12:06:08,762 DEBUG cd /home/sujay/lms/frappe-bench && /home/sujay/lms/frappe-bench/env/bin/python -m pip install --quiet --upgrade pip
+2023-12-26 12:06:13,036 LOG Installing frappe
+2023-12-26 12:06:13,037 DEBUG cd /home/sujay/lms/frappe-bench && /home/sujay/lms/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/sujay/lms/frappe-bench/apps/frappe 
+2023-12-26 12:06:19,261 DEBUG cd /home/sujay/lms/frappe-bench && /home/sujay/lms/frappe-bench/env/bin/python -m pip install --quiet --upgrade coverage~=6.5.0 Faker~=18.10.1 pyngrok~=6.0.0 unittest-xml-reporting~=3.2.0 watchdog~=3.0.0 hypothesis~=6.77.0 responses==0.23.1 freezegun~=1.2.2 
+2023-12-26 12:06:22,387 DEBUG cd /home/sujay/lms/frappe-bench/apps/frappe && yarn install
+2023-12-26 12:06:24,608 LOG Installing erpnext
+2023-12-26 12:06:24,609 DEBUG cd /home/sujay/lms/frappe-bench && /home/sujay/lms/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/sujay/lms/frappe-bench/apps/erpnext 
+2023-12-26 12:06:28,939 DEBUG cd /home/sujay/lms/frappe-bench/apps/erpnext && yarn install
+2023-12-26 12:06:29,375 LOG Installing email_delivery_service
+2023-12-26 12:06:29,376 DEBUG cd /home/sujay/lms/frappe-bench && /home/sujay/lms/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/sujay/lms/frappe-bench/apps/email_delivery_service 
+2023-12-26 12:06:32,276 LOG Installing kinara
+2023-12-26 12:06:32,276 DEBUG cd /home/sujay/lms/frappe-bench && /home/sujay/lms/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/sujay/lms/frappe-bench/apps/kinara 
+2023-12-26 12:06:36,546 LOG Installing lending
+2023-12-26 12:06:36,546 DEBUG cd /home/sujay/lms/frappe-bench && /home/sujay/lms/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/sujay/lms/frappe-bench/apps/lending 
+2023-12-26 12:06:40,876 LOG Installing payments
+2023-12-26 12:06:40,876 DEBUG cd /home/sujay/lms/frappe-bench && /home/sujay/lms/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/sujay/lms/frappe-bench/apps/payments 
+2023-12-26 12:06:45,033 LOG Installing india_compliance
+2023-12-26 12:06:45,034 DEBUG cd /home/sujay/lms/frappe-bench && /home/sujay/lms/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/sujay/lms/frappe-bench/apps/india_compliance 
+2023-12-26 12:06:49,235 DEBUG cd /home/sujay/lms/frappe-bench && /home/sujay/lms/frappe-bench/env/bin/python -m pip install --quiet --upgrade parameterized~=0.8.1 time-machine~=2.10.0 
+2023-12-26 12:06:51,388 LOG Installing klms
+2023-12-26 12:06:51,388 DEBUG cd /home/sujay/lms/frappe-bench && /home/sujay/lms/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/sujay/lms/frappe-bench/apps/klms 
+2023-12-26 12:06:55,631 LOG Installing kinara_lms
+2023-12-26 12:06:55,632 DEBUG cd /home/sujay/lms/frappe-bench && /home/sujay/lms/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/sujay/lms/frappe-bench/apps/kinara_lms 
+2023-12-26 12:07:08,420 INFO /usr/local/bin/bench migrate
+2023-12-26 12:07:37,250 INFO /usr/local/bin/bench start
+2023-12-26 12:07:40,646 INFO /usr/local/bin/bench start

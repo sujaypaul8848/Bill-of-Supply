@@ -1,0 +1,138 @@
+self=$$;  ( mariadb-dump --single-transaction --quick --lock-tables=false -u _385d09b426bab63e -p********** _385d09b426bab63e -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./klms.com/private/backups/20231208_120007-klms_com-database.sql.gz
+
+Backup Summary for klms.com at 2023-12-08 12:00:10.030004
+Config  : ./klms.com/private/backups/20231208_120007-klms_com-site_config_backup.json 94.0B
+Database: ./klms.com/private/backups/20231208_120007-klms_com-database.sql.gz         1.0MiB
+Backup for Site klms.com has been successfully completed
+self=$$;  ( mariadb-dump --single-transaction --quick --lock-tables=false -u _385d09b426bab63e -p********** _385d09b426bab63e -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./klms.com/private/backups/20231208_180003-klms_com-database.sql.gz
+
+Backup Summary for klms.com at 2023-12-08 18:00:05.654067
+Config  : ./klms.com/private/backups/20231208_180003-klms_com-site_config_backup.json 94.0B
+Database: ./klms.com/private/backups/20231208_180003-klms_com-database.sql.gz         1.0MiB
+Backup for Site klms.com has been successfully completed
+self=$$;  ( mariadb-dump --single-transaction --quick --lock-tables=false -u _385d09b426bab63e -p********** _385d09b426bab63e -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./klms.com/private/backups/20231211_120003-klms_com-database.sql.gz
+
+Backup Summary for klms.com at 2023-12-11 12:00:06.647270
+Config  : ./klms.com/private/backups/20231211_120003-klms_com-site_config_backup.json 118.0B
+Database: ./klms.com/private/backups/20231211_120003-klms_com-database.sql.gz         4.2MiB
+Backup for Site klms.com has been successfully completed
+self=$$;  ( mariadb-dump --single-transaction --quick --lock-tables=false -u _385d09b426bab63e -p********** _385d09b426bab63e -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./klms.com/private/backups/20231211_180006-klms_com-database.sql.gz
+
+Backup Summary for klms.com at 2023-12-11 18:00:10.225312
+Config  : ./klms.com/private/backups/20231211_180006-klms_com-site_config_backup.json 118.0B
+Database: ./klms.com/private/backups/20231211_180006-klms_com-database.sql.gz         4.3MiB
+Backup for Site klms.com has been successfully completed
+self=$$;  ( mariadb-dump --single-transaction --quick --lock-tables=false -u _385d09b426bab63e -p********** _385d09b426bab63e -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./klms.com/private/backups/20231212_120002-klms_com-database.sql.gz
+
+Backup Summary for klms.com at 2023-12-12 12:00:06.639460
+Config  : ./klms.com/private/backups/20231212_120002-klms_com-site_config_backup.json 118.0B
+Database: ./klms.com/private/backups/20231212_120002-klms_com-database.sql.gz         4.3MiB
+Backup for Site klms.com has been successfully completed
+self=$$;  ( mariadb-dump --single-transaction --quick --lock-tables=false -u _385d09b426bab63e -p********** _385d09b426bab63e -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./klms.com/private/backups/20231212_180006-klms_com-database.sql.gz
+
+Backup Summary for klms.com at 2023-12-12 18:00:10.493067
+Config  : ./klms.com/private/backups/20231212_180006-klms_com-site_config_backup.json 118.0B
+Database: ./klms.com/private/backups/20231212_180006-klms_com-database.sql.gz         4.4MiB
+Backup for Site klms.com has been successfully completed
+self=$$;  ( mariadb-dump --single-transaction --quick --lock-tables=false -u _385d09b426bab63e -p********** _385d09b426bab63e -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./klms.com/private/backups/20231213_120007-klms_com-database.sql.gz
+
+Backup Summary for klms.com at 2023-12-13 12:00:13.251904
+Config  : ./klms.com/private/backups/20231213_120007-klms_com-site_config_backup.json 118.0B
+Database: ./klms.com/private/backups/20231213_120007-klms_com-database.sql.gz         4.4MiB
+Backup for Site klms.com has been successfully completed
+self=$$;  ( mariadb-dump --single-transaction --quick --lock-tables=false -u _385d09b426bab63e -p********** _385d09b426bab63e -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./klms.com/private/backups/20231213_180004-klms_com-database.sql.gz
+
+Backup Summary for klms.com at 2023-12-13 18:00:06.946431
+Config  : ./klms.com/private/backups/20231213_180004-klms_com-site_config_backup.json 118.0B
+Database: ./klms.com/private/backups/20231213_180004-klms_com-database.sql.gz         4.4MiB
+Backup for Site klms.com has been successfully completed
+self=$$;  ( mariadb-dump --single-transaction --quick --lock-tables=false -u _385d09b426bab63e -p********** _385d09b426bab63e -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./klms.com/private/backups/20231214_120008-klms_com-database.sql.gz
+
+Backup Summary for klms.com at 2023-12-14 12:00:13.180027
+Config  : ./klms.com/private/backups/20231214_120008-klms_com-site_config_backup.json 118.0B
+Database: ./klms.com/private/backups/20231214_120008-klms_com-database.sql.gz         4.4MiB
+Backup for Site klms.com has been successfully completed
+self=$$;  ( mariadb-dump --single-transaction --quick --lock-tables=false -u _385d09b426bab63e -p********** _385d09b426bab63e -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./klms.com/private/backups/20231214_180003-klms_com-database.sql.gz
+
+Backup Summary for klms.com at 2023-12-14 18:00:07.092278
+Config  : ./klms.com/private/backups/20231214_180003-klms_com-site_config_backup.json 118.0B
+Database: ./klms.com/private/backups/20231214_180003-klms_com-database.sql.gz         4.4MiB
+Backup for Site klms.com has been successfully completed
+self=$$;  ( mariadb-dump --single-transaction --quick --lock-tables=false -u _385d09b426bab63e -p********** _385d09b426bab63e -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./klms.com/private/backups/20231215_120007-klms_com-database.sql.gz
+
+Backup Summary for klms.com at 2023-12-15 12:00:12.132343
+Config  : ./klms.com/private/backups/20231215_120007-klms_com-site_config_backup.json 118.0B
+Database: ./klms.com/private/backups/20231215_120007-klms_com-database.sql.gz         4.4MiB
+Backup for Site klms.com has been successfully completed
+self=$$;  ( mariadb-dump --single-transaction --quick --lock-tables=false -u _385d09b426bab63e -p********** _385d09b426bab63e -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./klms.com/private/backups/20231215_180007-klms_com-database.sql.gz
+
+Backup Summary for klms.com at 2023-12-15 18:00:11.488787
+Config  : ./klms.com/private/backups/20231215_180007-klms_com-site_config_backup.json 118.0B
+Database: ./klms.com/private/backups/20231215_180007-klms_com-database.sql.gz         4.4MiB
+Backup for Site klms.com has been successfully completed
+self=$$;  ( mariadb-dump --single-transaction --quick --lock-tables=false -u _385d09b426bab63e -p********** _385d09b426bab63e -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./klms.com/private/backups/20231218_120004-klms_com-database.sql.gz
+
+Backup Summary for klms.com at 2023-12-18 12:00:10.911991
+Config  : ./klms.com/private/backups/20231218_120004-klms_com-site_config_backup.json 118.0B
+Database: ./klms.com/private/backups/20231218_120004-klms_com-database.sql.gz         4.4MiB
+Backup for Site klms.com has been successfully completed
+self=$$;  ( mariadb-dump --single-transaction --quick --lock-tables=false -u _385d09b426bab63e -p********** _385d09b426bab63e -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./klms.com/private/backups/20231218_180005-klms_com-database.sql.gz
+
+Backup Summary for klms.com at 2023-12-18 18:00:08.846460
+Config  : ./klms.com/private/backups/20231218_180005-klms_com-site_config_backup.json 118.0B
+Database: ./klms.com/private/backups/20231218_180005-klms_com-database.sql.gz         4.4MiB
+Backup for Site klms.com has been successfully completed
+self=$$;  ( mariadb-dump --single-transaction --quick --lock-tables=false -u _385d09b426bab63e -p********** _385d09b426bab63e -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./klms.com/private/backups/20231219_120007-klms_com-database.sql.gz
+
+Backup Summary for klms.com at 2023-12-19 12:00:13.465024
+Config  : ./klms.com/private/backups/20231219_120007-klms_com-site_config_backup.json 118.0B
+Database: ./klms.com/private/backups/20231219_120007-klms_com-database.sql.gz         4.4MiB
+Backup for Site klms.com has been successfully completed
+self=$$;  ( mariadb-dump --single-transaction --quick --lock-tables=false -u _385d09b426bab63e -p********** _385d09b426bab63e -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./klms.com/private/backups/20231219_180006-klms_com-database.sql.gz
+
+Backup Summary for klms.com at 2023-12-19 18:00:11.219493
+Config  : ./klms.com/private/backups/20231219_180006-klms_com-site_config_backup.json 118.0B
+Database: ./klms.com/private/backups/20231219_180006-klms_com-database.sql.gz         4.4MiB
+Backup for Site klms.com has been successfully completed
+self=$$;  ( mariadb-dump --single-transaction --quick --lock-tables=false -u _385d09b426bab63e -p********** _385d09b426bab63e -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./klms.com/private/backups/20231220_120005-klms_com-database.sql.gz
+
+Backup Summary for klms.com at 2023-12-20 12:00:11.176030
+Config  : ./klms.com/private/backups/20231220_120005-klms_com-site_config_backup.json 118.0B
+Database: ./klms.com/private/backups/20231220_120005-klms_com-database.sql.gz         4.4MiB
+Backup for Site klms.com has been successfully completed
+self=$$;  ( mariadb-dump --single-transaction --quick --lock-tables=false -u _385d09b426bab63e -p********** _385d09b426bab63e -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./klms.com/private/backups/20231220_180005-klms_com-database.sql.gz
+
+Backup Summary for klms.com at 2023-12-20 18:00:10.538431
+Config  : ./klms.com/private/backups/20231220_180005-klms_com-site_config_backup.json 118.0B
+Database: ./klms.com/private/backups/20231220_180005-klms_com-database.sql.gz         4.4MiB
+Backup for Site klms.com has been successfully completed
+self=$$;  ( mariadb-dump --single-transaction --quick --lock-tables=false -u _385d09b426bab63e -p********** _385d09b426bab63e -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./klms.com/private/backups/20231221_120006-klms_com-database.sql.gz
+
+Backup Summary for klms.com at 2023-12-21 12:00:18.610746
+Config  : ./klms.com/private/backups/20231221_120006-klms_com-site_config_backup.json 118.0B
+Database: ./klms.com/private/backups/20231221_120006-klms_com-database.sql.gz         4.4MiB
+Backup for Site klms.com has been successfully completed
+self=$$;  ( mariadb-dump --single-transaction --quick --lock-tables=false -u _385d09b426bab63e -p********** _385d09b426bab63e -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./klms.com/private/backups/20231221_180004-klms_com-database.sql.gz
+
+Backup Summary for klms.com at 2023-12-21 18:00:12.555625
+Config  : ./klms.com/private/backups/20231221_180004-klms_com-site_config_backup.json 118.0B
+Database: ./klms.com/private/backups/20231221_180004-klms_com-database.sql.gz         4.4MiB
+Backup for Site klms.com has been successfully completed
+self=$$;  ( mariadb-dump --single-transaction --quick --lock-tables=false -u _385d09b426bab63e -p********** _385d09b426bab63e -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./klms.com/private/backups/20231222_120004-klms_com-database.sql.gz
+
+Backup Summary for klms.com at 2023-12-22 12:00:10.489504
+Config  : ./klms.com/private/backups/20231222_120004-klms_com-site_config_backup.json 118.0B
+Database: ./klms.com/private/backups/20231222_120004-klms_com-database.sql.gz         4.4MiB
+Backup for Site klms.com has been successfully completed
+self=$$;  ( mariadb-dump --single-transaction --quick --lock-tables=false -u _385d09b426bab63e -p********** _385d09b426bab63e -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./klms.com/private/backups/20231222_180006-klms_com-database.sql.gz
+
+Backup Summary for klms.com at 2023-12-22 18:00:30.824405
+Config  : ./klms.com/private/backups/20231222_180006-klms_com-site_config_backup.json 118.0B
+Database: ./klms.com/private/backups/20231222_180006-klms_com-database.sql.gz         28.9MiB
+Backup for Site klms.com has been successfully completed
+self=$$;  ( mariadb-dump --single-transaction --quick --lock-tables=false -u _385d09b426bab63e -p********** _385d09b426bab63e -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./klms.com/private/backups/20231226_120002-klms_com-database.sql.gz
+
+Backup Summary for klms.com at 2023-12-26 12:00:22.266865
+Config  : ./klms.com/private/backups/20231226_120002-klms_com-site_config_backup.json 118.0B
+Database: ./klms.com/private/backups/20231226_120002-klms_com-database.sql.gz         28.7MiB
+Backup for Site klms.com has been successfully completed
